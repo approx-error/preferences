@@ -1,0 +1,348 @@
+#################################
+# LaTeX PREAMBLE SNIPPETS BY JK #
+#################################
+
+
+##################
+# Document class #
+##################
+
+snippet dc "Document class without options" Abi
+\\documentclass{${1:class}} ${0}
+endsnippet
+
+snippet dco "Document class with options" Abi
+\\documentclass[${1:options}]{${2:class}} ${0}
+endsnippet
+
+##########
+# Inputs #
+##########
+
+snippet inputjk "Inputs the jk-math module" Ab
+\\input{~/latexmodules/jk-math.tex}$0
+endsnippet
+
+############
+# Packages #
+############
+
+snippet up "usepackage - removes square braces if options removed" Ab
+\usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+endsnippet
+
+# Include packages listed in 'laskari'-template
+#snippet pphy "Physics package" Ab
+#\\usepackage{physics}
+#endsnippet
+
+snippet ppla "Planet symbols package (mathabx)" Ab
+\\usepackage{mathabx}
+endsnippet
+
+snippet pali "Alternative integrals package (esint)" Ab
+\\usepackage{esint}
+endsnippet
+
+snippet pbigi "Bigints package" Ab
+\\usepackage{bigints}
+\\DeclareFontFamily{OMX}{lmex}{}
+\\DeclareFontShape{OMX}{lmex}{m}{n}{<-> lmex10}{}
+endsnippet
+
+# Insert more packages here ...
+
+################
+# Numberwithin #
+################
+
+snippet nw "Adds the numberwithin options" Ab
+\\numberwithin{equation}{section}
+\\numberwithin{figure}{section}
+\\numberwithin{table}{section}
+endsnippet
+
+##############
+# Newtheorem #
+##############
+
+snippet nt "Adds the newtheorem declaration" b
+\\newtheorem{${1:environment}}{${2:caption}}[${3:within}]
+endsnippet
+
+##################
+# Math operators #
+##################
+
+snippet mo "Declare a math operator" b
+\\DeclareMathOperator{\\${1:command}}{${2:definition}}
+endsnippet
+
+snippet mmo "Declare a math operator with possibility for undersetting" b
+\\DeclareMathOperator*{\\${1:command}}{${2:name}}
+endsnippet
+
+# Premade operators/functions
+
+snippet moih "Inverse hyperbolic functions" b
+\\DeclareMathOperator{\\ar${1:sin/cos/tan/sec/csc/cot}h}{ar$1h}
+endsnippet
+
+snippet moit "Inverse trig functions" b
+\\DeclareMathOperator{\\arc${1:sec/csc/cot}}{arc$1}
+endsnippet
+
+snippet mores "Residue" b
+\\DeclareMathOperator*{\\res}{Res}
+endsnippet
+
+snippet mowind "Winding number" b
+\\DeclareMathOperator{\\wind}{wind}
+endsnippet
+
+snippet more "Real part" b
+\\DeclareMathOperator{\\re}{Re}
+endsnippet
+
+snippet moim "Imaginary part" b
+\\DeclareMathOperator{\\im}{Im}
+endsnippet
+
+snippet moarg "Principal value of the complex argument" b
+\\DeclareMathOperator{\\Arg}{Arg}
+endsnippet
+
+snippet moln "Principal value of the complex logarithm" b
+\\DeclareMathOperator{\\Ln}{Ln}
+endsnippet
+
+
+
+############
+# Commands #
+############
+
+snippet nc "Define a new command" Ab
+\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}}
+endsnippet
+
+# Units
+
+snippet cuni "Define the 'uni' command" Ab
+\\newcommand{\\uni}[1]{\\ \\mathrm{#1}}
+endsnippet
+
+snippet csci "Define the 'sciuni' command" Ab
+\\newcommand{\\sciuni}[2]{\\cdot10^{#1} \\ \\mathrm{#2}}
+endsnippet
+
+# Vectors
+
+snippet cuv "Define the 'unitv' command" Ab
+\\newcommand{\\unitv}[1]{\\mathbf{\\hat{#1}}}
+endsnippet
+
+snippet cug "Define the 'unitg' command" Ab
+\\newcommand{\\unitg}[1]{\\boldsymbol{\\hat{#1}}}
+endsnippet
+
+snippet cv "Define the 'vtr' command" Ab
+\\newcommand{\\vtr}[1]{\\mathbf{#1}}
+endsnippet
+
+snippet cg "Define the 'vtg' command" Ab
+\\newcommand{\\vtg}[1]{\\boldsymbol{#1}}
+endsnippet
+
+snippet cip "Define the 'inprod' command" Ab
+\\newcommand{\\inprod}[2]{\\langle#1,#2\\rangle}
+endsnippet
+
+# Functions
+
+# ...
+
+# Calculus
+
+snippet cev "Define the 'eval' command" Ab
+\\newcommand{\\eval}[3]{\left[#1\right]_{#2}^{#3}}
+endsnippet
+
+snippet cEv "Define the 'Eval' command (adds big braces no matter the size of the thing to be evaluated)" Ab
+\\newcommand{\\Eval}[3]{\Big[#1\Big]_{#2}^{#3}}"
+endsnippet
+
+# Transforms
+
+snippet cft "Define the 'ft' command" Ab
+\\newcommand{\\ft}[2]{\\mathcal{F}[#1](#2)}
+endsnippet
+
+snippet cift "Define the 'ift' command" Ab
+\\newcommand{\ift}[2]{\\mathcal{F}^{-1}[#1](#2)}
+endsnippet
+
+snippet clt "Define the 'lt' command" Ab
+\\newcommand{\\lt}[2]{\mathcal{L}[#1](#2)}
+endsnippet
+
+snippet cilt "Define the 'ilt' command" Ab
+\\newcommand{\\ilt}[2]{\\mathcal{L}^{-1}[#1](#2)}
+endsnippet
+
+# Sets
+
+snippet cset "Define the 'set' command" Ab
+\\newcommand{\\set}[1]{\\mathbb{#1}}
+endsnippet
+
+# Combinatorics
+
+snippet crf "Define the 'risingfact' command" Ab
+\\newcommand{\\risingfact}[1]{^{\\overline{#1}}}
+endsnippet
+
+snippet cff "Define the 'fallingfact' command" Ab
+\\newcommand{\\fallingfact}[1]{^{\\underline{#1}}}
+endsnippet
+
+######################
+# Listings templates #
+######################
+
+snippet pylist "Add simple syntax highlighting to listings for python" Ab
+\\definecolor{dkgreen}{rgb}{0,0.6,0}
+\\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\\lstset{frame=tb,
+	language=Python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\\small\\ttfamily},
+	numbers=none,
+	numberstyle=\\tiny\\color{gray},
+	keywordstyle=\\color{blue},
+	commentstyle=\\color{dkgreen},
+	stringstyle=\\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet cuspylist "Add syntax higlighting to listings for python with the ability to add highlighting to user specified words" Ab
+\\definecolor{dkgreen}{rgb}{0,0.6,0}
+\\definecolor{cream}{rgb}{1,0.95,0.9}
+\\definecolor{mauve}{rgb}{0.58,0,0.82}
+\\definecolor{red}{rgb}{0.5,0,0}
+\\definecolor{yel}{rgb}{1,0.7,0.1}
+
+\\lstset{
+	frame=tb,
+	language=Python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\\small\\ttfamily},
+	numbers=none,
+	morekeywords={INSERT COMMA SEPARATED LIST OF KEYWORDS/FUNCTIONS ETC. TO BE EMPHASIZED},
+	keywordstyle=\\color{blue},
+	emph={INSERT COMMA SEPARATED LIST OF VARIABLES TO BE EMPHASIZED},
+	emphstyle=\\color{mauve},
+	backgroundcolor=\\color{cream},
+	numberstyle=\\color{red},
+	commentstyle=\\color{dkgreen},
+	stringstyle=\\color{yel},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet fortlist "Add syntax highlighting to listings for fortran" Ab
+\\definecolor{dkgreen}{rgb}{0,0.6,0}
+\\definecolor{cream}{rgb}{1,0.95,0.9}
+\\definecolor{mauve}{rgb}{0.58,0,0.82}
+\\definecolor{red}{rgb}{0.5,0,0}
+\\definecolor{yel}{rgb}{1,0.7,0.1}
+
+\\lstset{
+	frame=tb,
+	language=Fortran,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\\small\\ttfamily},
+	numbers=none,
+	morekeywords={},
+	keywordstyle=\\color{blue},
+	emph={program, end, print, read, write},
+	emphstyle=\\color{mauve},
+	backgroundcolor=\\color{cream},
+	numberstyle=\\color{red},
+	commentstyle=\\color{dkgreen},
+	stringstyle=\\color{yel},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+######################
+# Document templates #
+######################
+
+snippet laskari "Template for laskarit" Ab
+\\documentclass{article}
+% Encoding and language
+\\usepackage[T1]{fontenc}
+\\usepackage[utf8]{inputenc}
+\\usepackage{lmodern}
+\\usepackage[finnish]{babel}
+% Page layout
+\\usepackage{lastpage}
+\\usepackage{geometry}
+\\geometry{margin=3cm}
+\\usepackage{parskip}
+% Math
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+\\usepackage{derivative}
+\\usepackage{cancel}
+% Snippets for other math packages: ppla, pali, pbigi
+% Visuals and code
+\\usepackage{graphicx}
+\\usepackage{subcaption}
+\\usepackage{enumerate}
+\\usepackage{comment}
+\\usepackage{listingsutf8}
+\\usepackage{color}
+\\usepackage{parskip}
+
+\\input{~/latexmodules/jk-math.tex}
+$1
+\\title{$2}
+\\author{$3}
+
+\\begin{document}
+	\\normalsize
+	\\maketitle
+	$0
+\\end{document}
+endsnippet
+
+

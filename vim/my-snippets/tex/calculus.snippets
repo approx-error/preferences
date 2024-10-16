@@ -1,0 +1,479 @@
+#################################
+# LaTeX CALCULUS SNIPPETS BY JK #
+#################################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+
+##########
+# LIMITS #
+##########
+
+context "math()"
+snippet lim "Limit" i
+\\lim_{$1}$0
+endsnippet
+
+context "math()"
+snippet limsup "Limit supremum" i
+\\limsup_{$1}$0
+endsnippet
+
+context "math()"
+snippet liminf "Limit infimum" i
+\\liminf_{$1}$0
+endsnippet
+
+
+###############
+# EVALUATIONS #
+###############
+
+context "math()"
+snippet eval "Evaluation" i
+\\eval{${1:expr}}{${2:from}}{${3:to}}$0
+endsnippet
+
+context "math()"
+snippet Eval "Big delimiter evaluation" i
+\\Eval{${1:expr}}{${2:from}}{${3:to}}$0
+endsnippet
+
+
+#################
+# DIFFERENTIALS #
+#################
+
+context "math()"
+snippet df "Differential" Ai
+\\odif{$1}$0
+endsnippet
+
+context "math()"
+snippet fd "Functional differential" i
+\\fdif{$1}$0
+endsnippet
+
+context "math()"
+snippet pad "Partial differential" i
+\\partial{$1}$0
+endsnippet
+
+
+###################
+# DIFFERENTIATION #
+###################
+
+
+
+######################
+# General derivative #
+######################
+
+context "math()"
+snippet od "Ordinary derivative" Ai
+\\odv{${1:f}}{${2:x}}$0
+endsnippet
+
+context "math()"
+snippet o2d "Ordinary second derivative" Ai
+\\odv[order = 2]{${1:f}}{${2:x}}$0
+endsnippet
+
+context "math()"
+snippet ond "Ordinary nth derivative" i
+\\odv[order = ${1:3}]{${2:f}}{${3:x}}$0
+endsnippet
+
+####################
+# Time Derivatives #
+####################
+
+context "math()"
+snippet td "Time derivative" i
+\\odv{${1:x}}{t}$0
+endsnippet
+
+context "math()"
+snippet t2d "Second time derivative" i
+\\odv[order = 2]{${1:x}}{t}$0
+endsnippet
+
+
+##################################
+# Spatial coordinate derivatives #
+##################################
+
+context "math()"
+snippet xd "x-derivative" i
+\\odv{$1}{x}$0
+endsnippet
+
+context "math()"
+snippet x2d "Second x-derivative" i
+\\odv[order = 2]{$1}{x}$0
+endsnippet
+
+context "math()"
+snippet yd "y-derivative" i
+\\odv{$1}{y}$0
+endsnippet
+
+context "math()"
+snippet y2d "Second y-derivative" i
+\\odv[order = 2]{$1}{y}$0
+endsnippet
+
+context "math()"
+snippet zd "z-derivative" i
+\\odv{$1}{z}$0
+endsnippet
+
+context "math()"
+snippet z2d "Second z-derivative" i
+\\odv[order = 2]{$1}{z}$0
+endsnippet
+
+###############################################
+# Cylindrical and spherical coord derivatives #
+###############################################
+
+context "math()"
+snippet rd "r-derivative" i
+\\odv{$1}{r}$0
+endsnippet
+
+context "math()"
+snippet r2d "Second r-derivative" i
+\\odv[order = 2]{$1}{r}$0
+endsnippet
+
+context "math()"
+snippet phid "phi-derivative" i
+\\odv{$1}{\\varphi}$0
+endsnippet
+
+context "math()"
+snippet phi2d "Second phi-derivative" i
+\\odv[order = 2]{$1}{\\varphi}$0
+endsnippet
+
+context "math()"
+snippet thed "theta-derivative" i
+\\odv{$1}{\\theta}$0
+endsnippet
+
+context "math()"
+snippet the2d "Second theta-derivative" i
+\\odv[order = 2]{$1}{\\theta}$0
+endsnippet
+
+
+######################
+# Partial derivative #
+######################
+
+context "math()"
+snippet pd "Partial derivative" Ai
+\\pdv{${1:f}}{${2:x}}$0
+endsnippet
+
+context "math()"
+snippet p2d "Partial second derivative" Ai
+\\pdv[order = 2]{${1:f}}{${2:x}}$0
+endsnippet
+
+context "math()"
+snippet pmd "Partial mixed derivative" Ai
+\\pdv{${1:f}}{${2:x},${3:y}}$0
+endsnippet
+
+context "math()"
+snippet pnd "Partial nth derivative" i
+\\pdv[order = ${1:3}]{${2:f}}{${3:x}}$0
+endsnippet
+
+context "math()"
+snippet pmnd "Partial mixed nth derivative" i
+\\pdv[order = {${1:orders}}]{${2:f}}{${3:var1},${4:var2},$5}$0
+endsnippet
+
+###########################
+# Partial time derivative #
+###########################
+
+context "math()"
+snippet tpd "Partial time derivative" i
+\\pdv{$1}{t}$0
+endsnippet
+
+context "math()"
+snippet t2pd "Second partial time derivative" i
+\\pdv[order = 2]{$1}{t}$0
+endsnippet
+
+############################
+# Partial space derivative #
+############################
+
+context "math()"
+snippet xpd "Partial x-derivative" i
+\\pdv{$1}{x}$0
+endsnippet
+
+context "math()"
+snippet x2pd "Second partial x-derivative" i
+\\pdv[order = 2]{$1}{x}$0
+endsnippet
+
+context "math()"
+snippet ypd "Partial y-derivative" i
+\\pdv{$1}{y}$0
+endsnippet
+
+context "math()"
+snippet y2pd "Second partial y-derivative" i
+\\pdv[order = 2]{$1}{y}$0
+endsnippet
+
+context "math()"
+snippet zpd "Partial z-derivative" i
+\\pdv{$1}{z}$0
+endsnippet
+
+context "math()"
+snippet z2pd "Second partial z-derivative" i
+\\pdv[order = 2]{$1}{z}$0
+endsnippet
+
+#######################################################
+# Partial cylindrical and spherical coord derivatives #
+#######################################################
+
+context "math()"
+snippet rpd "Partial r-derivative" i
+\\pdv{$1}{r}$0
+endsnippet
+
+context "math()"
+snippet rp2d "Second partial r-derivative" i
+\\pdv[order = 2]{$1}{r}$0
+endsnippet
+
+context "math()"
+snippet phipd "Partial phi-derivative" i
+\\pdv{$1}{\\varphi}$0
+endsnippet
+
+context "math()"
+snippet phip2d "Second partial phi-derivative" i
+\\pdv[order = 2]{$1}{\\varphi}$0
+endsnippet
+
+context "math()"
+snippet thepd "Partial theta-derivative" i
+\\pdv{$1}{\\theta}$0
+endsnippet
+
+context "math()"
+snippet thep2d "Second partial theta-derivative" i
+\\pdv[order = 2]{$1}{\\theta}$0
+endsnippet
+
+###############
+# INTEGRATION #
+###############
+
+####################
+# Single integrals #
+####################
+
+context "math()"
+snippet ii "Indefinite integral" Ai
+\\int $1 \\odif{$2}$0
+endsnippet
+
+context "math()"
+snippet ni "Indefinite integral with integration variable first" i 
+\\int\\odif{$1} $0
+endsnippet
+
+context "math()"
+snippet di "Definite integral" Ai
+\\int_{$1}^{$2} $3 \\odif{$4}$0
+endsnippet
+
+context "math()"
+snippet nd "definite integral with integration variable first" i
+\\int_{$1}^{$2}\\odif{$3} $0
+endsnippet
+
+
+####################
+# Double integrals #
+####################
+
+context "math()"
+snippet 2i "Double indefinite integral" i
+\\iint $1 \\odif{$2}$0
+endsnippet
+
+context "math()"
+snippet 2ni "Double indefinite integral with integration variables first" i
+\\iint\\odif{$1} $0
+endsnippet
+
+context "math()"
+snippet 2d "Double definite integral" i
+\\int_{$1}^{$2}\\int_{$3}^{$4} $5 \\odif{$6}$0
+endsnippet
+
+context "math()"
+snippet 2nd "Double definite integral with integration variables first" i
+\\int_{$1}^{$2}\\int_{$3}^{$4}\\odif{$5} $0
+endsnippet
+
+
+####################
+# Triple integrals #
+####################
+
+context "math()"
+snippet 3i "Triple indefinite integral" i
+\\iiint $1 \\odif{$2}$0
+endsnippet
+
+context "math()"
+snippet 3d "Triple definite integral" i
+\\int_{$1}^{$2}\\int_{$3}^{$4}\\int_{$5}^{$6} $7 \\odif{$8}$0
+endsnippet
+
+context "math()"
+snippet 3ni "Triple indefinite integral with integration variables first" i
+\\iiint\\odif{$1} $0
+endsnippet
+
+context "math()"
+snippet 3di "Triple definite integral with integration variables first" i
+\\int_{$1}^{$2}\\int_{$3}^{$4}\\int_{$5}^{$6}\\odif{$7} $0
+endsnippet
+
+
+##############
+# Transforms #
+##############
+
+context "math()"
+snippet four "Fourier transform" i
+\\ft{${1:func}}{${2:new_variable}}
+endsnippet
+
+context "math()"
+snippet fourinv "Inverse Fourier transform" i
+\\ift{${1:func}}{${2:new_variable}}
+endsnippet
+
+context "math()"
+snippet lapt "Laplace transform" i
+\\lt{${1:func}}{${2:new_variable}}
+endsnippet
+
+context "math()"
+snippet laptinv "Inverse Laplace transform" i
+\\ilt{${1:func}}{${2:new_variable}}
+endsnippet
+
+
+###################
+# VECTOR CALCULUS #
+###################
+
+
+##########################
+# Differential operators #
+##########################
+
+context "math()"
+snippet nab "Gradient operator" Ai
+\\nabla$0
+endsnippet
+
+context "math()"
+snippet lap "Laplacian operator" Ai
+\\nabla^2$0
+endsnippet
+
+context "math()"
+snippet dal "D'Alembertian operator" Ai
+\\square^2$0
+endsnippet
+
+context "math()"
+snippet dv "Divergence" Ai
+\\nabla\\cdot$0
+endsnippet
+
+context "math()"
+snippet curl "Curl" Ai
+\\nabla\\times$0
+endsnippet
+
+
+#########################
+# Closed path integrals #
+#########################
+
+context "math()"
+snippet pai "Pathntegral"
+\\oint_{$1} $2 \\odif{$3}$0
+endsnippet
+
+context "math()"
+snippet np "Pathntegral withntegration variables first"
+\\oint_{$1}\\odif{$2} $0
+endsnippet
+
+#####################
+# Surface integrals #
+#####################
+
+context "math()"
+snippet si "Surfacentegral"
+\\iint_{$1} $2 \\odif{$3}$0
+endsnippet
+
+context "math()"
+snippet csi "Closed surfacentegral"
+\\oiint_{$1} $2 \\odif{$3}$0
+endsnippet
+
+context "math()"
+snippet nsi "Surfacentegral withntegration variables first"
+\\iint_{$1}\\odif{$2} $0
+endsnippet
+
+context "math()"
+snippet ncsi "Closed surfacentegral withntegration variables first"
+\\oiint_{$1}\\odif{$2} $0
+endsnippet
+
+####################
+# Volume integrals #
+####################
+
+context "math()"
+snippet vi "Volumentegral"
+\\iiint_{$1} $2 \\odif{$3}$0
+endsnippet
+
+context "math()"
+snippet nvi "Volumentegral withntegration variables first"
+\\iiint_{$1}\\odif{$2} $0
+endsnippet

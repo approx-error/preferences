@@ -1,0 +1,118 @@
+#################################
+# LaTeX DOCUMENT SNIPPETS BY JK #
+#################################
+
+
+#############################
+# Title, T.O.C and appendix #
+#############################
+
+snippet mt "Maketitle"
+\\maketitle
+endsnippet
+
+snippet toc "Table of contents"
+\\tableofcontents
+endsnippet
+
+snippet app "Appendix"
+\\appendix
+endsnippet
+
+
+##################
+# Text alignment #
+##################
+
+snippet noid "noindnent" Ai
+\\noindent
+endsnippet
+
+snippet pgbr "pagebreak" Ai
+\\pagebreak
+endsnippet
+
+
+###################
+# Text formatting #
+###################
+
+snippet ita "italic"
+\\textit{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet bf "bold face"
+\\textbf{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet under "underlined"
+\\underline{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet over "overlined"
+\\overline{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet emp "emphasized"
+\\emph{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet sc "small caps"
+\\textsc{${1:${VISUAL:text}}}${0}
+endsnippet
+
+
+##############
+# Text fonts #
+##############
+
+snippet sf "sans serif"
+\\textsf{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet rm "roman"
+\\textrm{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet tt "teletype (monospace)"
+\\texttt{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet tsub "subscripted"
+\\textsubscript{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet tsup "superscripted"
+\\textsuperscript{${1:${VISUAL:text}}}${0}
+endsnippet
+
+
+##############
+# Math fonts #
+##############
+
+snippet mf "Fraktur"
+\\mathfrak{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet mc "Calligraphic"
+\\mathcal{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet msc "Scr?"
+\\mathscr{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet mr "Roman"
+\\mathrm{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet mb "Blackboard bold"
+\\mathbb{${1:${VISUAL:text}}}${0}
+endsnippet
+
+snippet mss "Sans serif"
+\\mathsf{${1:${VISUAL:text}}}${0}
+endsnippet
+
+

@@ -1,0 +1,218 @@
+#######################################
+# LaTeX LINEAR ALGEBRA SNIPPETS BY JK #
+#######################################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+
+##############################
+# VECTOR AND MATRIX NOTATION #
+##############################
+
+context "math()"
+snippet uv "Unit vector (boldstyle)" i
+\\unitv{$1}$0
+endsnippet
+
+context "math()"
+snippet ug "Unit vector (greek letters, boldstyle)" i
+\\unitg{$1}$0
+endsnippet
+
+context "math()"
+snippet vtr "Vector (boldstyle)" i
+\\vtr{$1}$0
+endsnippet
+
+context "math()"
+snippet vtg "Vector (greek letters, boldstyle)" i
+\\vtg{$1}$0
+endsnippet
+
+################################
+# VECTOR AND MATRIX OPERATIONS #
+################################
+
+context "math()"
+snippet con "Take the complex conjugate" Ai
+^{\\ast}$0
+endsnippet
+
+context "math()"
+snippet her "Take the hermitian conjugate" Ai
+^{\\dagger}$0
+endsnippet
+
+context "math()"
+snippet tran "Take the transpose" Ai
+^{\\intercal}$0
+endsnippet
+
+context "math()"
+snippet x "Cross product" 
+\\times$0
+endsnippet
+
+context "math()"
+snippet . "Dot product" 
+\\cdot$0
+endsnippet
+
+###########################
+# PROPERTIES OF OPERATORS #
+###########################
+
+context "math()"
+snippet det "Determinant" i
+\\det$0
+endsnippet
+
+context "math()"
+snippet tr "Trace" i
+\\tr$0
+endsnippet
+
+context "math()"
+snippet rank "Rank" i
+\\rank$0
+endsnippet
+
+context "math()"
+snippet ker "Kernel of a linear transformation" i
+\\ker$0
+endsnippet
+
+context "math()"
+snippet dim "Dimension of a space" i
+\\dim$0
+endsnippet
+
+####################
+# BRA-KET-NOTATION #
+####################
+
+context "math()"
+snippet bra "Vector as a bra" Ai
+\\bra{$1}$0
+endsnippet
+
+context "math()"
+snippet Bra "Vector as a Big bra" Ai
+\\Bra{$1}$0
+endsnippet
+
+context "math()"
+snippet sbr "Vector as a small bra" Ai
+\\sbra{$1}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet ket "Vector as a ket" Ai
+\\ket{$1}$0
+endsnippet
+
+context "math()"
+snippet Ket "Vector as a Big ket" Ai
+\\Ket{$1}$0
+endsnippet
+
+context "math()"
+snippet ske "Vector as a small ket" Ai
+\\sket{$1}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet bk "Braket of vectors" Ai
+\\braket{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet Bk "Big braket of vectors" Ai
+\\Braket{$1}{$2}$0
+endsnippet
+
+
+# ------------------------------
+
+context "math()"
+snippet kb "Ketbra of vectors" Ai
+\\ketbra{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet Kb "Big ketbra of vectors" Ai
+\\Ketbra{$1}{$2}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet comm "Ordinary commutator" Ai
+\\comm{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet Comm "Ordinary big commutator" Ai
+\\Comm{$1}{$2}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet acomm "Anticommutator or poissonbraket" Ai
+\\acomm{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet Acomm "Big anticommutator or poissonbraket" Ai
+\\Acomm{$1}{$2}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet exva "Expected value" Ai
+\\exval{$1}$0
+endsnippet
+
+context "math()"
+snippet Exva "Big expected value" Ai
+\\Exval{$1}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet exvs "Expected value w.r.t a state" Ai
+\\exvstate{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet Exvs "Big expected value w.r.t a state" Ai
+\\Exvstate{$1}{$2}$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet mel "Matrix element" Ai
+\\matel{$1}{$2}{$3}$0
+endsnippet
+
+context "math()"
+snippet Mel "Big matrix element" Ai
+\\Matel{$1}{$2}{$3}$0
+endsnippet
+
+# ------------------------------

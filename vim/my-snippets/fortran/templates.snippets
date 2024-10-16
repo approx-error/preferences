@@ -1,0 +1,19 @@
+###########################################
+# FORTRAN PROGRAM TEMPLATE SNIPPETS BY JK #
+###########################################
+
+###########
+# Program #
+###########
+
+snippet temp1 "Program template" A
+program ${1:name}
+  implicit none
+
+  $2
+
+  contains
+    $0
+end program $1
+endsnippet
+

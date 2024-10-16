@@ -48,9 +48,17 @@ call plug#begin()
 	Plug 'lervag/vimtex'
 	Plug 'preservim/nerdtree'
 	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
 call plug#end()
 
+" vimtex stuff
+let g:tex_flavor = 'latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=0
+" set conceallevel=1
+" let g:tex_conceal='abdmg'   
+
+" UltiSnips stuff
 let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/my-snippets']  " Set custom UltiSnips location

@@ -1,0 +1,165 @@
+###############################################
+# FORTRAN KEYWORDND VARIABLE SNIPPETS BY JK #
+###############################################
+
+############
+# Keywords #
+############
+
+snippet impl "implicit none"
+implicit none
+$0
+endsnippet
+
+snippet cont "Contains"
+contains
+$0
+endsnippet
+
+###################
+# Kind parameters #
+###################
+
+snippet 1bi "1 byte integer"
+integer, parameter :: ik1 = selected_int_kind(1) ! -128 to 127
+endsnippet
+
+snippet 2bi "2 byte integer"
+integer, parameter :: ik2 = selected_int_kind(3) ! -32768 to 32767
+endsnippet
+
+snippet 4bi "4 byte integer (default)"
+integer, parameter :: ik4 = selected_int_kind(5) ! -2.14e9 to 2.14e9
+endsnippet
+
+snippet 8bi "8 byte integer"
+integer, parameter :: ik8 = selected_int_kind(10) ! -9.22e19 to 9.22e18
+endsnippet
+
+snippet 16bi "16 byte integer"
+integer, parameter :: ik16 = selected_int_kind(19) ! -1.70e38 to 1.70e38
+endsnippet
+
+# ------------------------------------------------------------------------
+
+snippet 4bf "4 byte float"
+integer, parameter :: rk4 = selected_real_kind(4,20) ! -3.40e38 to 3.40e38
+endsnippet
+
+snippet 8bf "8 byte float"
+integer, parameter :: rk8 = selected_real_kind(10,40) ! -1.79e308 to 1.79e308
+endsnippet
+
+snippet 16bf "16 byte float"
+integer, parameter :: rk16 = selected_real_kind(20,100) ! -1.18e4932 to 1.18e4932
+endsnippet
+
+########################
+# Variable definitions #
+########################
+
+snippet bool "Boolean value"
+logical :: $0
+endsnippet
+
+snippet cbool "Constant boolean"
+logical, parameter :: $1 = $0
+endsnippet
+
+# ----------------------------------
+
+snippet i "Simple integer"
+integer :: $0
+endsnippet
+
+snippet int "Integer"
+integer (kind = ${1:ik}) :: $0
+endsnippet
+
+snippet cin "Constant integer"
+integer (kind = ${1:ik}), parameter :: $1 = $0
+endsnippet
+
+snippet iin "Integer with intent"
+integer (kind = ${1:ik}), intent(${2:in/out/in out}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet r "Simple real"
+real :: $0
+endsnippet
+
+snippet real "Real number"
+real (kind = ${1:rk}) :: $0
+endsnippet
+
+snippet crea "Constant real number"
+real (kind = ${1:rk}), parameter :: $1 = $0
+endsnippet
+
+snippet irea "Real number with intent"
+real (kind = ${1:rk}), intent(${2:in/out/in out}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet c "Simple complex"
+complex :: $0
+endsnippet
+
+snippet compl "Complex number"
+complex (kind = ${1:rk}) :: $0
+endsnippet
+
+snippet ccomp "Constant complex number"
+complex (kind = ${1:rk}), parameter :: $1 = $0
+endsnippet
+
+snippet icomp "Complex number with intent"
+complex (kind = ${1:rk}), intent(${2:in/out/in out}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet str "String of characters"
+character(len = ${1:*}) :: $0
+endsnippet
+
+snippet cst "Constant string of characters"
+character(len = ${1:*}), parameter :: $1 = '$0'
+endsnippet
+
+snippet ist "String with intent"
+character(len = ${1:*}), intent(${2:in/out/in out}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet iar "Array of integers"
+integer, dimension(${1::}) :: $0
+endsnippet
+
+snippet iaar "Allocatable array of integers"
+integer, allocatable, dimension(${1::}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet rar "Array of reals"
+real, dimension(${1::}) :: $0
+endsnippet
+
+snippet raar "Allocatable array of reals"
+real, allocatable, dimension(${1::}) :: $0
+endsnippet
+
+# ----------------------------------
+
+snippet car "Array of complex numbers"
+complex, dimension(${1::}) :: $0
+endsnippet
+
+snippet caar "Allocatable array of complex numbers"
+complex, allocatable, dimension(${1::}) :: $0
+endsnippet

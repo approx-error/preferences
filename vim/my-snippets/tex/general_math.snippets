@@ -1,0 +1,164 @@
+#############################
+# LaTeX MATH SNIPPETS BY JK #
+#############################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+#########
+# Units #
+#########
+
+context "math()"
+snippet uni "Add units by calling the 'uni' command" i
+\\uni{${1:unit}}$0
+endsnippet
+
+context "math()"
+snippet sci "Adds units by calling the 'sciuni' command" i
+\\sciuni{${1:power}}{${2:unit}}$0
+endsnippet
+
+context "math()"
+snippet dgr "Adds the degree symbol correctly" i
+^{\\circ}$0
+endsnippet
+
+
+####################
+# Symbol modifiers #
+####################
+
+context "math()"
+snippet dot "Add overdot" Ai
+\\dot{$1}$0d
+endsnippet
+
+context "math()"
+snippet ddo "Add two overdots" Ai
+\\ddot{$1}$0
+endsnippet
+
+context "math()"
+snippet vec "Add vector arrow" Ai
+\\vec{$1}$0
+endsnippet
+
+context "math()"
+snippet hat "Add hat" Ai
+\\hat{$1}$0
+endsnippet
+
+context "math()"
+snippet bar "Add bar" Ai
+\\bar{$1}$0
+endsnippet
+
+context "math()"
+snippet til "Add tilde" Ai
+\\tilde{$1}$0
+endsnippet
+
+context "math()"
+snippet set "Make a set ie. render in mathbb" i
+\\set{$1}$0
+endsnippet
+
+############
+# Ellipsis #
+############
+
+context "math()"
+snippet ... "Ellipsis ..." Ai
+\\dots$0
+endsnippet
+
+context "math()"
+snippet c.. "Center ellipsis" Ai
+\\cdots$0
+endsnippet
+
+context "math()"
+snippet v.. "Vertical dots" Ai
+\\vdots$0
+endsnippet
+
+context "math()"
+snippet d.. "Diagonal dots" Ai
+\\ddots$0
+endsnippet
+
+##############
+# Operations #
+##############
+
+context "math()"
+snippet ff "Fraction" Ai
+\\frac{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet sq "Square root" Ai
+\\sqrt{$1}$0
+endsnippet
+
+context "math()"
+snippet aq "Any root ie. nth root" Ai
+\\sqrt[$1]{$2}$0
+endsnippet
+
+context "math()"
+snippet po "Power ie. superscript" Ai
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet ll "Low low ie. subscript" Ai
+_{$1}$0
+endsnippet
+
+context "math()"
+snippet su "Sum with only lower limit" i
+\\sum_{$1}$0
+endsnippet
+
+context "math()"
+snippet sul "Sum with lower and upper limits" i
+\\sum_{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet pr "Product with only lower limit" i
+\\prod_{$1}$0
+endsnippet
+
+context "math()"
+snippet prl "Product with lower and upper limits" i
+\\prod_{$1}^{$2}$0
+endsnippet
+
+
+#################
+# COMBINATORICS #
+#################
+
+context "math()"
+snippet binom "Binomial coefficient" i
+\\binom{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet risfact "Rising factorial" i
+\\risingfact{$1}$0
+endsnippet
+
+context "math()"
+snippet fallfact "Falling factorial" i
+\\fallingfact{$1}$0
+endsnippet

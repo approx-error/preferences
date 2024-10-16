@@ -1,0 +1,74 @@
+##############################################
+# FORTRAN READINGND WRITING SNIPPETS BY JK #
+##############################################
+
+
+##########
+# STDOUT #
+##########
+
+snippet pr "Unformatted print"
+print *, $0
+endsnippet
+
+snippet spr "String print"
+print '(a)', '$1'$0
+endsnippet
+
+snippet fpr "Formatted print"
+print '(${1:fmt})', ${2:output}$0
+endsnippet
+
+snippet napr "print without advancing the cursor to the next line"
+write(*, '(${1:fmt})', advance = 'no') '${2:output}'$0
+endsnippet
+
+
+#########
+# STDIN #
+#########
+
+snippet inp "Read user input"
+read(*,*) ${1:variable(s)}
+endsnippet
+
+snippet fin "Read formatted user input"
+read(*,'(${1:fmt})') ${2:variable(s)}
+endsnippet
+
+snippet ein "Read user input and handle errors"
+read(*,*, iostat = ${1:input_error}, iomsg = ${2:error_message}) ${3:variable(s)}
+endsnippet
+
+snippet efi "Read formatted user input and handle errors"
+read(*,'(${1:fmt})', iostat = ${2:input_error}, iomsg = ${3:error_message}) ${4:variable(s)}
+endsnippet
+
+
+#########################
+# Open and close a file #
+#########################
+
+snippet opclo "Open and close a file"
+open(unit = ${1:stream}, file = '${2:filename}', position = '${3:append/read/write/readwrite/readwrite}', status = ${3:old/new/replace/scratch/unknown}, iostat = ${4:file_error}, iomsg = ${5:error_message})
+$0
+close($1)
+endsnippet
+
+#####################
+# Writing to a file #
+#####################
+
+snippet wfile "Write to a file"
+write(unit = ${1:stream}, file = ${2:filename}, iostat = ${3:write_error}, iomsg = ${4:error_message}) ${5:variable(s)}
+endsnippet
+
+#######################
+# Reading from a file #
+#######################
+
+snippet rfile "Read from a file"
+read(unit = ${1:stream}, file = ${2:filename}, iostat = ${3:read_error}, iomsg = ${4:error_message}) ${5:variable(s)}
+endsnippet
+
+

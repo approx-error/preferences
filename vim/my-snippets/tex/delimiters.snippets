@@ -1,0 +1,162 @@
+##################################
+# LaTeX DELIMITER SNIPPETS BY JK #
+##################################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+
+# ----------------------------------------
+
+context "math()"
+snippet lr "left right delim chooser" i
+\\left${1} ${2:${VISUAL}} \\right$1$0
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet pp "Parentheses" Ai
+(${1:${VISUAL}})$0
+endsnippet
+
+context "math()"
+snippet lrp "left right parens" Ai
+\\left( ${1:${VISUAL}} \\right)$0
+endsnippet
+
+context "math()"
+snippet lp "left parenthesis" i
+\\left(
+endsnippet
+
+context "math()"
+snippet rp "right parenthesis" i
+\\right)
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet cc "Curly braces" Ai
+\\{ ${1:${VISUAL}} \\}$0
+endsnippet
+
+context "math()"
+snippet lrcb "left right curly braces" Ai
+\\left\\{ ${1:${VISUAL}} \\right\\}$0
+endsnippet
+
+context "math()"
+snippet lc "left curly bracket" i
+\\left\\{
+endsnippet
+
+context "math()"
+snippet rc "right curly bracket" i
+\\right\\}
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet bb "Brackets" Ai
+[${1:${VISUAL}}]$0
+endsnippet
+
+context "math()"
+snippet lrb "left right brackets" Ai
+\\left[ ${1:${VISUAL}} \\right]$0
+endsnippet
+
+context "math()"
+snippet lb "left bracket" i
+\\left[
+endsnippet
+
+context "math()"
+snippet rb "right bracket" i
+\\right]
+endsnippet
+
+# -----------------------------------------
+
+context "math()"
+snippet lra "left right angle brackets" Ai
+\\langle ${1:${VISUAL}} \\rangle$0
+endsnippet
+
+context "math()"
+snippet la "left angle bracket" i
+\\langle
+endsnippet
+
+context "math()"
+snippet ra "right angle bracket" i
+\\rangle
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet vv "Verts for absolute values" Ai
+|${1:${VISUAL}}|$0
+endsnippet
+
+context "math()"
+snippet lrv "left right verts" Ai
+\\left| ${1:${VISUAL}} \\right|$0
+endsnippet
+
+context "math()"
+snippet lv "left vertical" i
+\\left|
+endsnippet
+
+context "math()"
+snippet rv "right vertical" i
+\\right|
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet nn "Norm (double verts)" Ai
+\\| ${1:${VISUAL}} \\|$0
+endsnippet
+
+context "math()"
+snippet lrn "left right norm" Ai
+\\left\| ${1:${VISUAL}} \\right\|$0
+endsnippet
+
+context "math()"
+snippet ln "left norm" i
+\\left\|
+endsnippet
+
+context "math()"
+snippet rn "right norm" i
+\\right\|
+endsnippet
+
+# ----------------------------------------
+
+context "math()"
+snippet lrce "left right ceil" Ai
+\\lceil ${1:${VISUAL}} \\rceil$0
+endsnippet
+
+context "math()"
+snippet lrf "left right floor" Ai
+\\lfloor ${1:${VISUAL}} \\rfloor$0 
+endsnippet
+
+# ----------------------------------------
+

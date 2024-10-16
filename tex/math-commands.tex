@@ -1,0 +1,131 @@
+% LaTeX math commands
+
+% Units
+\newcommand{\uni}[1]{\ \mathrm{#1}}
+
+\newcommand{\sciuni}[2]{\cdot10^{#1} \ \mathrm{#2}}
+
+\newcommand{\dgr}{^{\circ}}
+
+% Inverse hyperbolic functions
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsch}
+\DeclareMathOperator{\arcoth}{arcoth}
+
+% Inverse trigonometric functions (only arcsec, arccsc, arccot as the others are defined by default)
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arcsc}{arccsc}
+\DeclareMathOperator{\arccot}{arccot}
+
+% Functions
+\DeclareMathOperator{\erf}{erf}
+
+% Complex analysis
+\DeclareMathOperator*{\res}{Res}
+
+\DeclareMathOperator{\wind}{wind}
+
+\DeclareMathOperator{\re}{Re}
+
+\DeclareMathOperator{\im}{Im}
+
+\DeclareMathOperator{\Arg}{Arg}
+
+\DeclareMathOperator{\Ln}{Ln}
+
+\DeclareMathOperator{\pv}{P.V.}
+
+% Linear algebra
+
+% Defined by default: det, dim, ker
+
+\DeclareMathOperator{\tr}{tr}
+
+\DeclareMathOperator{\rank}{rank}
+
+\newcommand{\inprod}[2]{\langle#1,#2\rangle}
+
+% ------------------------------------------
+
+\newcommand{\bra}[1]{\big\langle#1\big\rvert}
+\newcommand{\Bra}[1]{\Big\langle#1\Big\rvert}
+\newcommand{\sbra}[1]{\langle#1\rvert}
+
+% ------------------------------------------
+
+\newcommand{\ket}[1]{\big\lvert#1\big\rangle}
+\newcommand{\Ket}[1]{\Big\lvert#1\Big\rangle}
+\newcommand{\sket}[1]{\lvert#1\rangle}
+
+% ------------------------------------------
+
+\newcommand{\braket}[2]{\big\langle#1\big\lvert#2\big\rangle}
+\newcommand{\Braket}[2]{\Big\langle#1\Big\lvert#2\Big\rangle}
+
+% ------------------------------------------
+
+\newcommand{\ketbra}[2]{\big\lvert#1\big\rangle\big\langle#2\big\rvert}
+\newcommand{\Ketbra}[2]{\Big\lvert#1\Big\rangle\Big\langle#2\Big\rvert}
+
+% ------------------------------------------
+
+\newcommand{\exval}[1]{\big\langle#1\big\rangle}
+\newcommand{\Exval}[1]{\Big\langle#1\Big\rangle}
+
+% ------------------------------------------
+
+\newcommand{\exvstate}[2]{\big\langle#2\big\lvert#1\big\rvert#2\big\rangle}
+\newcommand{\Exvstate}[2]{\Big\langle#2\Big\lvert#1\Big\rvert#2\Big\rangle}
+
+% ------------------------------------------
+
+\newcommand{\matel}[3]{\big\langle#1\big\lvert#2\big\rvert#3\big\rangle}
+\newcommand{\Matel}[3]{\Big\langle#1\Big\lvert#2\Big\rvert#3\Big\rangle}
+
+% ------------------------------------------
+
+\newcommand{\comm}[2]{\big[#1, #2\big]}
+\newcommand{\Comm}[2]{\Big[#1, #2\Big]}
+
+% ------------------------------------------
+
+\newcommand{\acomm}[2]{\big\{#1, #2\big\}}
+\newcommand{\Acomm}[2]{\Big\{#1, #2\Big\}}
+
+% Vectors
+
+\newcommand{\unitv}[1]{\mathbf{\hat{#1}}}
+
+\newcommand{\unitg}[1]{\boldsymbol{\hat{#1}}}
+
+\newcommand{\vtr}[1]{\mathbf{#1}}
+
+\newcommand{\vtg}[1]{\boldsymbol{#1}}
+
+
+% Calculus
+
+\newcommand{\eval}[3]{\left[#1\right]_{#2}^{#3}}
+
+\newcommand{\Eval}[3]{\Big[#1\Big]_{#2}^{#3}}
+
+\newcommand{\ft}[2]{\mathcal{F}[#1](#2)}
+
+\newcommand{\ift}[2]{\mathcal{F}^{-1}[#1](#2)}
+
+\newcommand{\lt}[2]{\mathcal{L}[#1](#2)}
+
+\newcommand{\ilt}[2]{\mathcal{L}^{-1}[#1](#2)}
+
+% Sets
+
+\newcommand{\set}[1]{\mathbb{#1}}
+
+% Combinatorics
+
+\newcommand{\risingfact}[1]{^{\overline{#1}}}
+
+\newcommand{\fallingfact}[1]{^{\underline{#1}}}

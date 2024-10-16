@@ -1,0 +1,60 @@
+##########################
+# FORTRAN SNIPPETS BY JK #
+##########################
+
+####################
+# Program sections #
+####################
+
+snippet prog "Program definition" b
+program ${1:main}
+  $0
+end program $1
+endsnippet
+
+snippet mod "Module definition" b
+module ${1:mod}
+  $0
+end module $1
+endsnippet
+
+snippet iface "Interface" 
+interface
+  $0
+end interface
+endsnippet
+
+###############
+# Subprograms #
+###############
+
+snippet func "Function definition"
+function ${1:func}(${2:params})
+  $0
+end function $1
+endsnippet
+
+snippet resfunc "Function with result parameter definition" 
+function ${1:func}(${2:params}) result()
+  $0
+end function $1
+endsnippet
+
+snippet sub "Subroutine definition"
+subroutine ${1:sub}
+  $0
+end subroutine $1
+endsnippet
+
+#################
+# Derived types #
+#################
+
+snippet type "Derived type definition"
+type ${1:name}
+  $0
+end type $1
+endsnippet
+
+
+

@@ -1,0 +1,249 @@
+#################################
+# LaTeX FUNCTION SNIPPETS BY JK #
+#################################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+
+#############
+# Functions #
+#############
+
+# Trig functions
+
+context "math()"
+snippet sin "Sine function" i
+\\sin$0
+endsnippet
+
+context "math()"
+snippet cos "Cosine function" i
+\\cos$0
+endsnippet
+
+context "math()"
+snippet tan "Tangent function" i
+\\tan$0
+endsnippet
+
+context "math()"
+snippet sec "Secant function" i
+\\sec$0
+endsnippet
+
+context "math()"
+snippet csc "Cosecant function" i
+\\csc$0
+endsnippet
+
+context "math()"
+snippet cot "Cotangent function" i
+\\cot$0
+endsnippet
+
+# Inverse trig functions
+
+context "math()"
+snippet asin "Arcsine function" i
+\\arcsin$0
+endsnippet
+
+context "math()"
+snippet acos "Arccosine function" i
+\\arccos$0
+endsnippet
+
+context "math()"
+snippet atan "Arctangent function" i
+\\arctan$0
+endsnippet
+
+context "math()"
+snippet asec "Arcsecant function" i
+\\arcsec$0
+endsnippet
+
+context "math()"
+snippet acsc "Arccosecant function" i
+\\arccsc$0
+endsnippet
+
+context "math()"
+snippet acot "Arccotangent function" i
+\\arccot$0
+endsnippet
+
+# Hyperbolic functions
+
+context "math()"
+snippet sinh "Hyperbolic sine function" i
+\\sinh$0
+endsnippet
+
+context "math()"
+snippet cosh "Hyperbolic cosine function" i
+\\cosh$0
+endsnippet
+
+context "math()"
+snippet tanh "Hyperbolic tangent function" i
+\\tanh$0
+endsnippet
+
+context "math()"
+snippet sech "Hyperbolic secant function" i
+\\sech$0
+endsnippet
+
+context "math()"
+snippet csch "Hyperbolic cosecant function" i
+\\csch$0
+endsnippet
+
+context "math()"
+snippet coth "Hyperbolic cotangent function" i
+\\coth$0
+endsnippet
+
+# Inverse hyperbolic functions
+
+context "math()"
+snippet asinh "Area sinh function" i
+\\arsinh$0
+endsnippet
+
+context "math()"
+snippet acosh "Area cosh function" i
+\\arcosh$0
+endsnippet
+
+context "math()"
+snippet atanh "Area tanh function" i
+\\artanh$0
+endsnippet
+
+context "math()"
+snippet asech "Area sech function" i
+\\arsech$0
+endsnippet
+
+context "math()"
+snippet acsch "Area csch function" i
+\\arcsch$0
+endsnippet
+
+context "math()"
+snippet acoth "Area coth function" i
+\\arcoth$0
+endsnippet
+
+# Exponential functions
+
+context "math()"
+snippet exp "Exponential" i
+\\exp$0
+endsnippet
+
+context "math()"
+snippet eul "Euler's number to some power" i
+e^{$1}$0
+endsnippet
+
+context "math()"
+snippet 2p "Base 2 exponential" i
+2^{$1}$0
+endsnippet
+
+context "math()"
+snippet erf "Error function" i
+\\erf$0
+endsnippet
+
+# Logarithmic functions
+
+context "math()"
+snippet ln "Natural logarithm" i
+\\ln$0
+endsnippet
+
+context "math()"
+snippet log "Logarithm" i
+\\log_{${1:10}}$0
+endsnippet
+
+# Complex analysis
+
+context "math()"
+snippet res "Residue" i
+\\res$0
+endsnippet
+
+context "math()"
+snippet wind "Winding number" i
+\\wind$0
+endsnippet
+
+context "math()"
+snippet re "Real part" i
+\\re$0
+endsnippet
+
+context "math()"
+snippet im "Imaginary part" i
+\\im$0
+endsnippet
+
+context "math()"
+snippet arg "Complex argument" i
+\\arg$0
+endsnippet
+
+context "math()"
+snippet Arg "Principal value argument" i
+\\Arg$0
+endsnippet
+
+context "math()"
+snippet Ln "Principal value logarithm" i
+\\Ln$0
+endsnippet
+
+context "math()"
+snippet pv "Cauchy principal value" i
+\\pv$0
+endsnippet
+
+# Other math
+
+context "math()"
+snippet ord "Order of a function (Big O notation)" i
+\\mathcal{O}($1)$0
+endsnippet
+
+context "math()"
+snippet max "Maximum function" i
+\\max$0
+endsnippet
+
+context "math()"
+snippet min "Minimum function" i
+\\min$0
+endsnippet
+
+context "math()"
+snippet sup "Supremum" i
+\\sup$0
+endsnippet
+
+context "math()"
+snippet inf "Infimum" i
+\\inf$0
+endsnippet
+

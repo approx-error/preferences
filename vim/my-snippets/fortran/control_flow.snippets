@@ -1,0 +1,66 @@
+#######################################
+# FORTRAN CONTROL FLOW SNIPPETS BY JK #
+#######################################
+
+#############
+# Branching #
+#############
+
+snippet if "If-statement"
+if ($1) then
+  $0
+end if
+endsnippet
+
+snippet elif "Else if -statement"
+else if ($1) then
+  $0
+endsnippet
+
+snippet else "Else-statement"
+else
+  $0
+endsnippet
+
+snippet ifb "If-block"
+if ($1) then
+  $2
+else if ($3) then
+  $4
+else
+  $0
+end if
+endsnippet
+
+snippet case "switch-statement"
+select case (${1:expression})
+  case ($2)
+    $3
+  case default
+    $4
+end select$0
+endsnippet
+
+#########
+# Loops #
+#########
+
+snippet do "do-loop"
+do ${1:i} = ${2:start}, ${3:stop}, ${4:increment}
+  $0
+end do
+endsnippet
+
+snippet inf "Infinite do-loop"
+do
+  $0
+end do
+endsnippet
+
+snippet while "do-while-loop"
+do while ($1)
+  $0
+end do
+endsnippet
+
+

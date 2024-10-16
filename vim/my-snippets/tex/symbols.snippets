@@ -1,0 +1,525 @@
+###############################
+# LaTeX SYMBOL SNIPPETS BY JK #
+###############################
+
+# Defining a helper function to only make these work inside latex math mode:
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+# Now adding 'context "math()"' above a snippet will only make it work inside math mode
+
+####################
+# Ordinary symbols #
+####################
+
+# ------------------------------
+
+context "math()"
+snippet oo "Infinity" Ai
+\\infty$0
+endsnippet
+
+context "math()"
+snippet qed "Proof square" Ai
+\\square$0
+endsnippet
+
+context "math()"
+snippet pm "Plus-minus" Ai
+\\pm$0
+endsnippet
+
+context "math()"
+snippet mp "Minus-plus" Ai
+\\mp$0
+endsnippet
+
+context "math()"
+snippet ast "Asterisk" Ai
+\\ast$0
+endsnippet
+
+context "math()"
+snippet star "Star" Ai
+\\star$0
+endsnippet
+
+context "math()"
+snippet circ "Circle" Ai
+\\circ$0
+endsnippet
+
+context "math()"
+snippet bullet "Bullet" Ai
+\\bullet$0
+endsnippet
+
+
+# ------------------------------
+
+context "math()"
+snippet forall "For all" Ai
+\\forall$0
+endsnippet
+
+context "math()"
+snippet exists "There exists" Ai
+\\exists$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet in "set membership" i
+\\in$0
+endsnippet
+
+context "math()"
+snippet ni "set membership in other direction" i
+\\ni$0
+endsnippet
+
+context "math()"
+snippet nin "Not contained in" i
+\\notin$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet psubs "proper subset" i
+\\subset$0
+endsnippet
+
+context "math()"
+snippet psups "proper superset" i
+\\supset$0
+endsnippet
+
+context "math()"
+snippet subs "subset" i
+\\subseteq$0
+endsnippet
+
+context "math()"
+snippet sups "superset" i
+\\supseteq$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet or "Logical or" Ai
+\\lor$0
+endsnippet
+
+context "math()"
+snippet and "Logical and" Ai
+\\land$0
+endsnippet
+
+context "math()"
+snippet not "Logical not" Ai
+\\lnot$0
+endsnippet
+
+# ------------------------------
+
+context "math()"
+snippet perp "Perpendicular" Ai
+\\perp$0
+endsnippet
+
+context "math()"
+snippet paral "Parallel" Ai
+\\parallel$0
+endsnippet
+
+# ------------------------------
+
+####################
+# Relation symbols #
+####################
+
+context "math()"
+snippet stack "Stack relations" Ai
+\\stackrel{${1:above}}{${2:relation}}$0
+endsnippet
+
+context "math()"
+snippet == "Aligned Equals sign &= in align-environments" Ai
+&=$0
+endsnippet
+
+context "math()"
+snippet != "Not equal to" Ai
+\\neq$0
+endsnippet
+
+context "math()"
+snippet <= "Less than or equal to" Ai
+\\leq$0
+endsnippet
+
+context "math()"
+snippet >= "Greater than or equal to" Ai
+\\geq$0
+endsnippet
+
+context "math()"
+snippet a= "Approximately equal to" Ai
+\\approx$0
+endsnippet
+
+context "math()"
+snippet sim "Similar to or asymptotically equal to" Ai
+\\sim$0
+endsnippet
+
+context "math()"
+snippet nsm "Not similat" Ai
+\\nsim$0
+endsnippet
+
+context "math()"
+snippet prop "Proportional to" Ai
+\\propto$0
+endsnippet
+
+context "math()"
+snippet def "By definition, equivalent, identity" Ai
+\\equiv$0
+endsnippet
+
+context "math()"
+snippet s= "Similar to or equal to" Ai
+\\simeq$0
+endsnippet
+
+context "math()"
+snippet <s "Less than or approximately equal to" Ai
+\\lesssim$0
+endsnippet
+
+context "math()"
+snippet >s "Greater than or approximately equal to" Ai
+\\gtrsim$0
+endsnippet
+
+context "math()"
+snippet << "Much less than" i
+\\ll$0
+endsnippet
+
+context "math()"
+snippet >> "Much greater than" i
+\\gg$0
+endsnippet
+
+context "math()"
+snippet <<< "Much, much less than" i
+\\lll$0
+endsnippet
+
+context "math()"
+snippet >>> "Much, much greater than" i
+\\ggg$0
+endsnippet
+
+context "math()"
+snippet eq "if and only iff, equivalent" Ai
+\\iff$0
+endsnippet
+
+context "math()"
+snippet mpl "implies" Ai
+\\implies$0
+endsnippet
+
+#################
+# Misc. letters #
+#################
+
+context "math()"
+snippet ell "ell" i
+\\ell$0
+endsnippet
+
+context "math()"
+snippet hb "h bar, reduced Plack constant" Ai
+\\hbar$0
+endsnippet
+
+context "math()"
+snippet aleph "Aleph" Ai
+\\aleph$0
+endsnippet
+
+context "math()"
+snippet beth "Beth" Ai
+\\beth$0
+endsnippet
+
+context "math()"
+snippet gimel "gimel" Ai
+\\gimel$0
+endsnippet
+
+#################
+# Greek letters #
+#################
+
+context "math()"
+snippet alp "alpha" Ai
+\\alpha$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet bet "beta" Ai
+\\beta$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet gam "gamma" Ai
+\\gamma$0
+endsnippet
+
+context "math()"
+snippet Gam "capital gamma" Ai
+\\Gamma$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet del "delta" Ai
+\\delta$0
+endsnippet
+
+context "math()"
+snippet Del "capital delta" Ai
+\\Delta$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet eps "epsilon" Ai
+\\epsilon$0
+endsnippet
+
+context "math()"
+snippet vep "variant epsilon" Ai
+\\varepsilon$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet zet "zeta" Ai
+\\zeta$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet eta "eta" Ai
+\\eta$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet the "theta" Ai
+\\theta$0
+endsnippet
+
+context "math()"
+snippet The "capital theta" Ai
+\\Theta$0
+endsnippet
+
+context "math()"
+snippet vth "variant theta" Ai
+\\vartheta$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet ota "iota" Ai
+\\iota$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet kap "kappa" Ai
+\\kappa$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet lam "lambda" Ai
+\\lambda$0
+endsnippet
+
+context "math()"
+snippet Lam "capital lambda" Ai
+\\Lambda$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet mu "mu" Ai
+\\mu$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet nu "nu" Ai
+\\nu$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet xi "xi" Ai
+\\xi$0
+endsnippet
+
+context "math()"
+snippet Xi "capital xi" Ai
+\\Xi$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet pi "pi" Ai
+\\pi$0
+endsnippet
+
+context "math()"
+snippet Pi "capital pi" Ai
+\\Pi$0
+endsnippet
+
+context "math()"
+snippet vpi "variant pi" Ai
+\\varpi$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet rho "rho" Ai
+\\rho$0
+endsnippet
+
+context "math()"
+snippet vrh "Variant rho" Ai
+\\varrho$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet sig "sigma" Ai
+\\sigma$0
+endsnippet
+
+context "math()"
+snippet Sig "capital sigma" Ai
+\\Sigma$0
+endsnippet
+
+context "math()"
+snippet vsi "variant sigma" Ai
+\\varsigma$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet tau "tau" Ai
+\\tau$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet ups "upsilon" Ai
+\\upsilon$0
+endsnippet
+
+context "math()"
+snippet Ups "capital upsilon" Ai
+\\Upsilon$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet phi "phi" Ai
+\\phi$0
+endsnippet
+
+context "math()"
+snippet Phi "capital phi" Ai
+\\Phi$0
+endsnippet
+
+context "math()"
+snippet vph "variant phi" Ai
+\\varphi$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet chi "chi" Ai
+\\chi$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet psi "psi" Ai
+\\psi$0
+endsnippet
+
+context "math()"
+snippet Psi "capital psi" Ai
+\\Psi$0
+endsnippet
+
+context "math()"
+snippet vps "variant psi" Ai
+\\varpsi$0
+endsnippet
+
+# -----------------------------
+
+context "math()"
+snippet ome "omega" Ai
+\\omega$0
+endsnippet
+
+context "math()"
+snippet Ome "capital omega" Ai
+\\Omega$0
+endsnippet
+
+# -----------------------------
+
