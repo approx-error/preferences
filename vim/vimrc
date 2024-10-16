@@ -1,0 +1,56 @@
+" Disable vi compatibility
+set nocompatible
+
+" Enable file type detection
+filetype on
+
+" Enable plugins and load plugin for the detected file type
+filetype plugin on
+
+" Load an indent file for the detected file type
+filetype indent on
+
+" UTF-8 character encoding
+set encoding=utf-8
+
+" Syntax highlighting on
+syntax on
+
+" Color scheme selection
+colorscheme habamax
+
+" Add line numbers
+set number
+
+" Highlight cursor line
+set cursorline
+
+" Highlight cursor column
+" set cursorcolumn
+
+" Tabs inserts spaces by default and actual tabs can be inserted with Ctrl+V+Tab (Dont use here so that make doesn't freak out)
+" set expandtab
+
+" Shift width
+set shiftwidth=4
+
+" Tab width
+set tabstop=4
+
+" Show current mode
+set showmode
+
+" Allow putting 1000 lines at most (<1000)
+set viminfo='100,<1000,s100,h
+
+" PLUGINS
+call plug#begin()
+	Plug 'lervag/vimtex'
+	Plug 'preservim/nerdtree'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+call plug#end()
+
+let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
