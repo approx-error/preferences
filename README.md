@@ -1,8 +1,9 @@
 # approx-error/preferences
 
-A repository of preferences, templates and customization files I have found useful. 
+A repository of preferences, templates, customization files and small scripts I have found useful. 
 These mostly consist of [Vim](https://www.vim.org/) configuration files, [ultisnips](https://github.com/SirVer/ultisnips) snippets and LaTeX commands.
-I don't expect anyone to find a use for these but in case someone does (or I need them when using a new computer), they will be waiting here.
+There are also some example files for correct syntax when using certain tools/languages that I keep coming back to for reference so might as well put them here.
+I don't expect anyone else to find a use for these but in case someone does, they will be waiting here.
 
 ## Currently included files
 
@@ -30,7 +31,10 @@ I don't expect anyone to find a use for these but in case someone does (or I nee
 - Custom Latex math commands I keep needing (These commands are also recognized by the TeX snippets for a smoother LaTeX experience)
 - ...
 
-### Other 
+### Examples
+
+- An example of a makefile that compiles a fortran program from many sources
+- A fortran program that illustrates some correct fortran syntax
 
 ## License
 
