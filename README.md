@@ -17,19 +17,25 @@ I don't expect anyone else to find a use for these but in case someone does, the
 	- Python
 	- Fortran
 - Lots of snippets for the ultisnips plugin
-	- General snippets (/all/all.snippets) 
-    - TeX snippets (/tex)
-    - Python snippets (/python)
-    - Fortran snippets (/fortran)
-    - GNU Make snippets (/make/make.snippets)
-	- Snippets for making new snippets (/snippets/snippets.snippets)
-	- ...
-- ...
+	- General snippets (all.snippets)
+    - TeX snippets
+    - Python snippets
+    - Fortran snippets
+    - GNU Make snippets
+	- Snippets for making new snippets (snippets.snippets)
+	- Vimscript snippets
+    - Shell script snippets
+    - HTML snippets
+    - CSS snippets
+    - Javascript snippets
 
 ### TeX
 
 - Custom Latex math commands I keep needing (These commands are also recognized by the TeX snippets for a smoother LaTeX experience)
-- ...
+
+### Scripts
+
+- A simple python script to initiate a sympy session in terminal for symbolic calculations
 
 ### Examples
 
