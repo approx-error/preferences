@@ -1,12 +1,12 @@
-###########################################
-# FORTRAN PROGRAM TEMPLATE SNIPPETS BY JK #
-###########################################
+#####################################################
+# FORTRAN PROGRAM TEMPLATE SNIPPETS BY approx-error #
+#####################################################
 
-###########
-# Program #
-###########
+############
+# Programs #
+############
 
-snippet temp1 "Program template" A
+snippet boilerprog "Boilerplate program template" Ab
 program ${1:name}
   implicit none
 
@@ -17,3 +17,19 @@ program ${1:name}
 end program $1
 endsnippet
 
+
+
+###########
+# Modules #
+###########
+
+snippet boilermod "Boilerplate module template" Ab
+module ${1:name}
+  implicit none
+
+  $2
+
+  contains
+    $0
+end module $1
+endsnippet

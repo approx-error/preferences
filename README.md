@@ -5,6 +5,14 @@ These mostly consist of [Vim](https://www.vim.org/) configuration files, [ultisn
 There are also some example files for correct syntax when using certain tools/languages that I keep coming back to for reference so might as well put them here.
 I don't expect anyone else to find a use for these but in case someone does, they will be waiting here.
 
+## Usage
+
+Here is the quickest way to be able to use these preferences out of the box on your own system (assuming a unix-based system where symbolic links can be created):
+
+1. Clone this repository to your home directory (ie. ~/)
+2. Create symlinks (TBA)
+3. (TBA)
+
 ## Currently included files
 
 ### Vim
@@ -17,17 +25,17 @@ I don't expect anyone else to find a use for these but in case someone does, the
 	- Python
 	- Fortran
 - Lots of snippets for the ultisnips plugin
-	- General snippets (all.snippets)
+	- General snippets (all.snippets) (TBA)
     - TeX snippets
-    - Python snippets
+    - Python snippets (TBA)
     - Fortran snippets
-    - GNU Make snippets
+    - GNU Make snippets (TBA)
 	- Snippets for making new snippets (snippets.snippets)
-	- Vimscript snippets
-    - Shell script snippets
-    - HTML snippets
-    - CSS snippets
-    - Javascript snippets
+	- Vimscript snippets (TBA)
+    - Shell script snippets (TBA)
+    - HTML snippets (TBA)
+    - CSS snippets (TBA)
+    - Javascript snippets (TBA)
 
 ### TeX
 
@@ -41,6 +49,7 @@ I don't expect anyone else to find a use for these but in case someone does, the
 
 - An example of a makefile that compiles a fortran program from many sources
 - A fortran program that illustrates some correct fortran syntax
+- A markdown file containing some specific terminal/programming related problems I've run into and how I managed to fix them
 
 ## License
 

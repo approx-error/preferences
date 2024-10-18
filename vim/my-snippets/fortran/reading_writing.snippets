@@ -1,6 +1,6 @@
-##############################################
-# FORTRAN READINGND WRITING SNIPPETS BY JK #
-##############################################
+########################################################
+# FORTRAN READING AND WRITING SNIPPETS BY approx-error #
+########################################################
 
 
 ##########
@@ -36,11 +36,11 @@ snippet fin "Read formatted user input"
 read(*,'(${1:fmt})') ${2:variable(s)}
 endsnippet
 
-snippet ein "Read user input and handle errors"
+snippet ein "Read user input and log errors"
 read(*,*, iostat = ${1:input_error}, iomsg = ${2:error_message}) ${3:variable(s)}
 endsnippet
 
-snippet efi "Read formatted user input and handle errors"
+snippet efi "Read formatted user input and log errors"
 read(*,'(${1:fmt})', iostat = ${2:input_error}, iomsg = ${3:error_message}) ${4:variable(s)}
 endsnippet
 

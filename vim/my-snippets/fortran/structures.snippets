@@ -1,6 +1,6 @@
-##########################
-# FORTRAN SNIPPETS BY JK #
-##########################
+##############################################
+# FORTRAN STRUCTURE SNIPPETS BY approx-error #
+##############################################
 
 ####################
 # Program sections #
@@ -35,7 +35,7 @@ end function $1
 endsnippet
 
 snippet resfunc "Function with result parameter definition" 
-function ${1:func}(${2:params}) result()
+function ${1:func}(${2:params}) result(${3:res})
   $0
 end function $1
 endsnippet

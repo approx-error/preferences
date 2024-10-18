@@ -1,6 +1,6 @@
-#################################
-# LaTeX PREAMBLE SNIPPETS BY JK #
-#################################
+###########################################
+# LaTeX PREAMBLE SNIPPETS BY approx-error #
+###########################################
 
 
 ##################
@@ -19,8 +19,8 @@ endsnippet
 # Inputs #
 ##########
 
-snippet inputjk "Inputs the jk-math module" Ab
-\\input{~/latexmodules/jk-math.tex}$0
+snippet inputmc "Inputs the math-commands module" Ab
+\\input{~/preferences/tex/math-commands.tex}$0
 endsnippet
 
 ############
@@ -306,7 +306,7 @@ endsnippet
 # Document templates #
 ######################
 
-snippet laskari "Template for laskarit" Ab
+snippet exercise "Template for exercise problem submissions" Ab
 \\documentclass{article}
 % Encoding and language
 \\usepackage[T1]{fontenc}
@@ -333,7 +333,7 @@ snippet laskari "Template for laskarit" Ab
 \\usepackage{color}
 \\usepackage{parskip}
 
-\\input{~/latexmodules/jk-math.tex}
+\\input{~/preferences/tex/math-commands.tex}
 $1
 \\title{$2}
 \\author{$3}
