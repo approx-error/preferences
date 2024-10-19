@@ -53,7 +53,7 @@ or move them to some other directory (if you don't want to lose them but also do
 
 This has the same motivation as step 3 where we're letting Vim search for these directories in the default place and linking them so somewhere else.
 
-6. Test to see everything works as intended by starting up Vim and playing around with it.
+6. Start Vim and run :PlugInstall to make vim-plug install the plugins
 
 Now you're all set to begin using the setup! For specific tutorials on how the plugins and snippets actually work, I recommend [this fantastic tutorial](https://ejmastnak.com/tutorials/vim-latex/intro/) 
 by Elijan Mastnak on supercharged mathematical typesetting. It covers the vim-plug plugin manager, the vimtex and ultisnips plugins and much, much more.
