@@ -53,6 +53,7 @@ call plug#begin()
 	Plug 'lervag/vimtex'
 	Plug 'preservim/nerdtree'
 	Plug 'SirVer/ultisnips'
+	Plug 'myusuf3/numbers.vim'
 call plug#end()
 
 " vimtex stuff
@@ -67,3 +68,6 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
 let g:UltiSnipsSnippetDirectories = [$HOME.'/preferences/vim/my-snippets']  " Set custom UltiSnips location
+
+" Numbers.vim stuff
+let g:numbers_exclude = ['nerdtree']

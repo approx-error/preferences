@@ -72,6 +72,7 @@ Everything else currently included in this repo can be used straight away withou
 - The [vim-plug](https://github.com/junegunn/vim-plug) plugin manager
 - The plugins I use
     - [nerdtree](https://github.com/preservim/nerdtree)
+    - [numbers.vim](https://github.com/myusuf3/numbers.vim)
     - [vimtex](https://github.com/lervag/vimtex)
     - [ultisnips](https://github.com/SirVer/ultisnips)
 - Filetype specific configuration files (ftplugin)
