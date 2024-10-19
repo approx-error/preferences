@@ -118,8 +118,8 @@ The default shell is /bin/sh. It can be changed by modifying the SHELL variable
 
 ### Shell variables
 
-If you need to reference a shell variable, make won't know you're doing so since it thinks \\$(var) means some make variable. To make make be able to recognize shell variables, 
-use a double dollar sign \\$\\$(shell\_var).
+If you need to reference a shell variable, make won't know you're doing so since it thinks `$(var)` means some make variable. To make make be able to recognize shell variables, 
+use a double dollar sign `$$(shell_var)`.
 
 ### Error handling
 
