@@ -22,16 +22,21 @@ colorscheme habamax
 " Add line numbers
 set number
 
+" Add relative line numbers
+set relativenumber
+
 " Highlight cursor line
 set cursorline
 
 " Highlight cursor column
 " set cursorcolumn
 
-" Tabs inserts spaces by default and actual tabs can be inserted with Ctrl+V+Tab (Dont use here so that make doesn't freak out)
+" Tabs inserts spaces by default and actual tabs can be inserted with 
+" Ctrl+V+Tab (Dont use here so that make doesn't freak out)
 " set expandtab
 
-" Shift width
+" Shift operation width ie. how far text is moved when pressing < or > in
+" visual mode
 set shiftwidth=4
 
 " Tab width

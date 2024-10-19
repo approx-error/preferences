@@ -1,0 +1,9 @@
+[submodule "vim/plugged/nerdtree"]
+	path = vim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/plugged/ultisnips"]
+	path = vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/plugged/vimtex"]
+	path = vim/plugged/vimtex
+	url = https://github.com/lervag/vimtex.git
