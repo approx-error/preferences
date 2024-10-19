@@ -29,7 +29,7 @@ Variables are and can only be strings.
 
 ### Referencing variables
 
-Variables are referenced with the $-sign. There are built in variables and user defined variables in make. Example:
+Variables are referenced with the \$-sign. There are built in variables and user defined variables in make. Example:
 
 ```make
 $(some_var)
@@ -75,7 +75,7 @@ $< = the first prerequisite
 
 ## Wildcards and patterns
 
-To make sure that the \*-wildcard behaves as expected, use the built in variable $(wildcard):
+To make sure that the \*-wildcard behaves as expected, use the built in variable \$(wildcard):
 
 ```make
 wrong := *.o
@@ -118,8 +118,8 @@ The default shell is /bin/sh. It can be changed by modifying the SHELL variable
 
 ### Shell variables
 
-If you need to reference a shell variable, make won't know you're doing so since it thinks $(var) means some make variable. To make make be able to recognize shell variables, 
-use a double dollar sign $$(shell\_var).
+If you need to reference a shell variable, make won't know you're doing so since it thinks \$(var) means some make variable. To make make be able to recognize shell variables, 
+use a double dollar sign \$\$(shell\_var).
 
 ### Error handling
 
