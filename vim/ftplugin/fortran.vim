@@ -7,8 +7,6 @@ set expandtab
 set tabstop=2
 
 " Set shifting operator (visual mode < and > keys) width to two spaces
-setlocal shiftwidth=2
+set shiftwidth=2
 
-" Colorscheme
-colorscheme habamax
 

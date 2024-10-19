@@ -31,9 +31,8 @@ set cursorline
 " Highlight cursor column
 " set cursorcolumn
 
-" Tabs inserts spaces by default and actual tabs can be inserted with 
-" Ctrl+V+Tab (Dont use here so that make doesn't freak out)
-" set expandtab
+" Make tabs expand as spaces (Actual tabs can be inserted with (Ctrl+V+Tab)
+set expandtab
 
 " Shift operation width ie. how far text is moved when pressing < or > in
 " visual mode
