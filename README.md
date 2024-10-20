@@ -26,13 +26,17 @@ Without further ado here is how to use this setup:
 
 1. Clone this repository to your home directory (ie. ~/) by running
 
-`git clone https://github.com/approx-error/preferences.git`
+```sh
+git clone https://github.com/approx-error/preferences.git
+```
 
 2. If you're using a .vimrc file and it is located in your home directory, either delete it, merge it with the vimrc file in this repository or move it somewhere else if you want to preserve it
 
 3. Create a symbolic link to the vimrc file in ~/preferences/vim/ under the name .vimrc in your home directory by running:
 
-`ln --symbolic ~/preferences/vim/vimrc ~/.vimrc`
+```sh
+ln --symbolic ~/preferences/vim/vimrc ~/.vimrc
+```
 
 What this essentially does is create a "file" called .vimrc in your home directory which is actually a link to the vimrc file contained in this repository. This is done so that you don't have to change the
 default location where Vim searches for the .vimrc file. Instead you can let Vim search for it in the default location and simply link the default location to somewhere else. This is especially convenient
@@ -45,15 +49,21 @@ or move them to some other directory (if you don't want to lose them but also do
 
 5. Create symbolic links to the directories mentioned in step 4 in the ~/.vim/ directory by running:
 
-`ln --symbolic ~/preferences/vim/autoload ~/.vim`
+```sh
+ln --symbolic ~/preferences/vim/autoload ~/.vim
+```
 
-`ln --symbolic ~/preferences/vim/ftplugin ~/.vim`
+```sh
+ln --symbolic ~/preferences/vim/ftplugin ~/.vim
+```
 
-`ln --symbolic ~/preferences/vim/ftplugin ~/.vim`
+```sh
+ln --symbolic ~/preferences/vim/ftplugin ~/.vim
+```
 
 This has the same motivation as step 3 where we're letting Vim search for these directories in the default place and linking them so somewhere else.
 
-6. Start Vim and run :PlugInstall to make vim-plug install the plugins
+6. Start Vim and run `:PlugInstall` to make vim-plug install the plugins
 
 Now you're all set to begin using the setup! For specific tutorials on how the plugins and snippets actually work, I recommend [this fantastic tutorial](https://ejmastnak.com/tutorials/vim-latex/intro/) 
 by Elijan Mastnak on supercharged mathematical typesetting. It covers the vim-plug plugin manager, the vimtex and ultisnips plugins and much, much more.

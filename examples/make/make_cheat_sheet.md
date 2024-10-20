@@ -128,5 +128,5 @@ will still be continued). Run make with the -i flag to add a - before every comm
 
 ### Running make recursively
 
-To run make again with the same flags from inside the makefile (Can be useful if you want the Makefile to compile stuff in multiple directories). Use the builtin variable MAKE. It contains the flags used
-to run make the first time. For example if make was run with the -s flag. Running echo $(MAKE) will return make -s.
+To run make again with the same flags from inside the makefile (Can be useful if you want the Makefile to compile stuff in multiple directories). Use the builtin variable `MAKE`. It contains the flags used
+to run make the first time. For example if make was run with the -s flag. Running `echo $(MAKE)` will return make -s.
