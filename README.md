@@ -76,24 +76,25 @@ Everything else currently included in this repo can be used straight away withou
 
 ### Vim files
 
-- My .vimrc file
-	- Basic highlighting, indentation and colorscheme settings 
+- My .vimrc file (vimrc)
+	- Basic highlighting, colorscheme, numbering, indenting, pasting and pathing settings 
 	- Plugin specific settings
-- The [vim-plug](https://github.com/junegunn/vim-plug) plugin manager
-- The plugins I use
+- The [vim-plug](https://github.com/junegunn/vim-plug) plugin manager (autoload/plug.vim)
+- The plugins I use (plugged/)
     - [nerdtree](https://github.com/preservim/nerdtree)
     - [numbers.vim](https://github.com/myusuf3/numbers.vim)
     - [vimtex](https://github.com/lervag/vimtex)
     - [ultisnips](https://github.com/SirVer/ultisnips)
-- Filetype specific configuration files (ftplugin)
+- Filetype specific configuration files (ftplugin/)
 	- Python
 	- Fortran
-- Lots of snippets for the ultisnips plugin
-	- General snippets (all.snippets) (TBA)
+    - GNU Make
+- Lots of snippets for the ultisnips plugin (my-snippets/)
+	- General snippets (all.snippets)
     - TeX snippets
-    - Python snippets (TBA)
+    - Python snippets
     - Fortran snippets
-    - GNU Make snippets (TBA)
+    - GNU Make snippets
 	- Snippets for making new snippets (snippets.snippets)
 	- Vimscript snippets (TBA)
     - Shell script snippets (TBA)
@@ -111,8 +112,11 @@ Everything else currently included in this repo can be used straight away withou
 
 ### Examples
 
-- An example of a makefile that compiles a fortran program from many sources
-- A fortran program that illustrates some correct fortran syntax
+- Fortran
+    - A fortran program that illustrates some correct fortran syntax
+- GNU Make
+    - An example of a makefile that compiles a fortran program from many sources
+    - A makefile cheat sheet markdown file
 - A markdown file containing some specific terminal/programming related problems I've run into and how I managed to fix them
 
 ## License

@@ -1,0 +1,170 @@
+####################################
+# MAKEFILE SNPPETS BY approx-error #
+####################################
+
+#########
+# RULES #
+#########
+
+snippet rule "Basic make rule syntax" b
+${1:target}: ${2:dependencies}
+	@echo ${3:echo info}
+	${4:commands}
+$0
+endsnippet
+
+snippet run "Run rule" b
+run: ${1:executable}
+	@echo Running $1...
+	./$1
+$0
+endsnippet
+
+snippet clean "Clean rule" b
+clean:
+	@echo Cleaning up...
+	rm -f *.0 *.mod ${1:executable}
+endsnippet
+
+snippet srctoobj "Source to object files rule" b
+${1:obj files}: ${2:src files}
+	@echo Creating object files...
+	${3:compiler} ${4:flags} -c $2
+$0
+endsnippet
+
+snippet objtoexe "Object files to executable rule" b
+${1:executable}: ${2:obj files}
+	@echo Linking object files...
+	${3:compiler} ${4:flags} $^ -o $@
+$0
+endsnippet
+
+#############
+# VARIABLES #
+#############
+
+snippet ref "Reference a variable"
+$(${1:var_name})$0
+endsnippet
+
+snippet shref "Reference a shell variable"
+$$(${1:shell_var_name})$0
+endsnippet
+
+snippet shell "Reference the builtin SHELL variable"
+$(SHELL)$0
+endsnippet
+
+snippet make "Reference the builtin MAKE variable"
+$(MAKE)$0
+endsnippet
+
+snippet target "Reference rule target"
+$@$0
+endsnippet
+
+snippet newdep "Reference dependencies newer than rule target" 
+$?$0
+endsnippet
+
+snippet alldep "Reference all dependencies"
+$^$0
+endsnippet
+
+snippet firdep "Reference the first depenency"
+$<$0
+endsnippet
+
+snippet wild "Use the make wildcard"
+$(wildcard *.${1:extension})$0
+endsnippet
+
+snippet sub "Use the make substition character"
+%.${1:extension}$0
+endsnippet
+
+snippet patsubst "Use the patsubst function"
+$(patsubst %.${1:from this}, %.${2:to this}, $(${3:in this}))$0
+endsnippet
+
+snippet filter "Use the filter function"
+$(filter %.${1:these}, $(${2:from this}))$0
+endsnippet
+
+#############
+# TEMPLATES #
+#############
+
+snippet f90boiler "Boilerplate fortran makefile with only one source file" b
+COMPILER := gfortran
+FLAGS := -Wall -ffree-form -ffree-line-length-none -fimplicit-none -fbackslash
+src_file := ${1:main}.f90
+exe_name := ${2:executable}
+
+$(exe_name): $(src_file)
+	@echo Compiling source to executable...
+	$(COMPILER) $(FLAGS) $< -o $@
+
+run: $(exe_name)
+	@echo Running the program...
+	./$<
+
+clean:
+	@echo Cleaning up...
+	rm -f $(wildcard *.o) $(exe_name) $0
+endsnippet
+
+snippet f90modboiler "Boilerplate fortran makefile with modules" b
+COMPILER := gfortran
+FLAGS := -Wall -ffree-form -ffree-line-length-none -fimplicit-none -fbackslash
+main_src := ${1:main}.f90
+module_src := ${1:mod1}.f90 $2
+src_files := $(module_src) $(main_src)
+obj_files := $(patsubst %.f90, %.o, $(src_files))
+exe_name := ${3:executable}
+
+$(exe_name): $(obj_files)
+	@echo Linking object files...
+	$(COMPILER) $(FLAGS) $^ -o $@
+
+$(obj_files): $(src_files)
+	@echo Compiling source files...
+	$(COMPILER) $(FLAGS) -c $^
+
+run: $(exe_name)
+	@echo Running the program...
+	./$<
+
+clean:
+	@echo Cleaning up...
+	rm -f $(wildcard *.o) $(wildcard *.mod) $(exe_name) $0
+endsnippet
+
+snippet boiler "General makefile template"
+COMPILER := ${1:gfortran}
+FLAGS := ${2:-Wall -ffree-form -ffree-line-length-none -fimplicit-none -fbackslash}
+main_src := ${3:main}.${4:extension}
+module_src := ${5:mod1.f90} $6
+src_files := $(module_src) $(main_src)
+obj_files := $(patsubst %.$4, %.o, $(src_files))
+exe_name := ${7:executable}
+input_args := ${8:input.dat} $9
+output_files := ${10:output.dat}
+
+$(exe_name): $(obj_files)
+	@echo Linking object files...
+	$(COMPILER) $(FLAGS) $^ -o $@
+
+$(obj_files): $(src_files)
+	@echo Compiling source files...
+	$(COMPILER) $(FLAGS) -c $^
+
+run: $(exe_name)
+	@echo Running the program...
+	./$< $(input_args)
+
+clean:
+	@echo Cleaning up...
+	rm -f $(wildcard *.o) ${11:$(wildcard *.mod)} $(exe_name) $(output_files) $0
+endsnippet

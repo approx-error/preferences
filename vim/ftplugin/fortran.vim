@@ -1,8 +1,5 @@
 " Fortran filetype specifications
 
-" Make tabs expand as spaces
-set expandtab
-
 " Set tab width to two spaces
 set tabstop=2
 

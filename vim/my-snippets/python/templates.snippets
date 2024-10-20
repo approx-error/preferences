@@ -1,0 +1,49 @@
+############################################
+# PYTHON PROGRAM TEMPLATES BY approx-error #
+############################################
+
+snippet main_boiler "Main program boiler plate"
+# ${1:Program desc}
+
+${2:import} $3
+
+
+def main():
+	'''
+	${4:docstring}
+	'''
+	${5:pass}
+
+if __name__ == '__main__':
+	main()
+endsnippet
+
+snippet mod_boiler "Module boiler plate"
+'''
+${1:Module docstring}
+'''
+
+${2:import} $3
+
+def ${4:func}(${5:variables}) -> ${6:return_type}:
+	${7:pass}
+	return $8
+
+if __name__ == '__main__':
+	# Do tests on module functions
+	${9:pass}
+endsnippet
+
+snippet validation "An input validation loop that runs until the condition is met"
+validated = False
+
+while not validated:
+	try:
+		value = ${1:int}(input(${2:Give value: }))
+	except ${3:ValueError}:
+		print(f'{value} is not a valid ${4:type}! Please try again.')
+	else:
+		${5:print('Valid input. Proceeding...')}
+		validated = True
+$0
+endsnippet

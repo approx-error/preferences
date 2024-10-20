@@ -1,0 +1,65 @@
+#######################################################
+# PYTHON READING AND WRITING SNIPPETS BY approx-error #
+#######################################################
+
+############
+# PRINTING #
+############
+
+snippet pr "Basic print"
+print(${1:variable})$0
+endsnippet
+
+snippet pre "Print with end kwarg"
+print(${1:variable}, end='${2:\n\n}')$0
+endsnippet
+
+snippet prs "Print string"
+print('${1:string}')$0
+endsnippet
+
+snippet prse "Print string with end kwarg"
+print('${1:string}', end='${2:\n\n}')$0
+endsnippet
+
+snippet pres "Print with end and sep kwargs"
+print(${1:variable1}, ${2:variable2}, end='${3:\n\n}', sep='${4:\t}')$0
+endsnippet
+
+snippet prf "Print formatted string"
+print(f'${1:formatted_string}')$0
+endsnippet
+
+##########
+# INPUTS #
+##########
+
+snippet inp "Basic input"
+input()$0
+endsnippet
+
+snippet inpp "Input with a prompt"
+input(${1:prompt_var})$0
+endsnippet
+
+snippet inps "Input with a prompt string"
+input('${1:Give value: }')$0
+endsnippet
+
+############################
+# FILE READING AND WRITING #
+############################
+
+snippet with "With-statement"
+with open(file=${1:filename}, mode=${2:'r'/'a'/'w'/'x'/'+'/'b'}) as ${3:data_variable}:
+	${4:pass}
+endsnippet
+
+snippet npload "Numpy loadtxt"
+np.loadtxt(${1:filename}, dtype=${2:str}, comments='${3:#}', delimiter='${4:\t}', skiprows=${5:0}, usecols=${6:None}, quotechar=${7:None})$0
+endsnippet
+
+snippet npsave "Numpy savetxt"
+np.savetxt(${1:filename}, ${2:data_to_save}, fmt='${3:%s}', delimiter='${4:\t}', newline='${5:\n}', header='$6', footer='$7', comments='${8:#}')
+endsnippet
+

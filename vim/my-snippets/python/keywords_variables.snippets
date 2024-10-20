@@ -1,0 +1,79 @@
+########################################################
+# PYTHON KEYWORD AND VARIABLE SNIPPETS BY approx-error #
+########################################################
+
+################
+# ENVIRONMENTS #
+################
+
+snippet #! "basic shebang"
+#!/usr/bin/env python
+$0
+endsnippet
+
+snippet #!2 "Python2 shebang"
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+snippet #!3 "Python3 shebang"
+#!/usr/bin/env python3
+$0
+endsnippet
+
+snippet utf8 "utf-8 encoding"
+# -*- coding: utf-8
+endsnippet
+
+#############
+# IMPORTING #
+#############
+
+snippet imp "import a module"
+import ${1:numpy}
+$0
+endsnippet
+
+snippet impas "import a module as"
+import ${1:numpy} as ${2:np}
+$0
+endsnippet
+
+snippet fromimp "from module import function"
+from ${1:numpy} import ${2:linspace}
+$0
+endsnippet
+
+snippet fromall "from module import *"
+from ${1:numpy}$ import *
+$0
+endsnippet
+
+snippet ignore "The type: ignore specification"
+# type: ignore
+$0
+endsnippet
+
+snippet impscience "Import scientific modules"
+import numpy as np
+import matplotlb.pyplot as plt
+import scipy as sp
+$0
+endsnippet
+
+snippet impsymb "Import symbolic calculation modules"
+import sympy as sp
+import pylatex as plx
+$0
+endsnippet
+
+##########
+# LAMBDA #
+##########
+
+snippet lam "Lambda function"
+lambda ${1:variables}: ${2:pass}
+endsnippet
+
+

@@ -1,0 +1,150 @@
+################################################
+# PYTHON CONTROL FLOW SNIPPETS BY approx-error #
+################################################
+
+
+################
+# CONDITIONALS #
+################
+
+snippet if "if-statement"
+if ${1:condition}:
+	${2:pass}
+$0
+endsnippet
+
+snippet elif "elif-statement"
+elif ${1:condition}:
+	${2:pass}
+$0
+endsnippet
+
+snippet else "else-statement"
+else:
+	${1:pass}
+$0
+endsnippet
+
+snippet ifel "if-else-block"
+if ${1:condition}:
+	${2:pass}
+else:
+	${3:pass}
+$0
+endsnippet
+
+snippet ifb "if-block"
+if ${1:condition}:
+	${2:pass}
+elif ${3:condition}:
+	${4:pass}
+else:
+	${5:pass}
+$0
+endsnippet
+
+snippet terb "Ternary assginment"
+${1:assign_this} if ${2:this} else ${3:assign_this}$0
+endsnippet
+
+snippet match "Match statement"
+match ${1:pattern_to_mathch}:
+	case ${2:case1}:
+		${3:pass}
+	case ${4:case2}:
+		${5:pass}
+	case ${6:_}
+		${7:pass}
+$0
+endsnippet
+
+snippet case "A case for a match block"
+case ${1:case}:
+	${2:pass}
+$0
+endsnippet
+
+##############
+# EXCEPTIONS #
+##############
+
+snippet try "Try-block"
+try:
+	${1:pass}
+except ${2:ValueError}:
+	${3:pass}
+$0
+endsnippet
+
+snippet tryfin "Try-finally-block"
+try:
+	${1:pass}
+except ${2:ValueError}:
+	${3:pass}
+finally:
+	${4:pass}
+$0
+endsnippet
+
+snippet tryels "Try-else-block"
+try:
+	${1:pass}
+except ${2:ValueError}:
+	${3:pass}
+else:
+	${4:pass}
+$0
+endsnippet
+
+snippet tryels "Try-else-finally-block"
+try:
+	${1:pass}
+except ${2:ValueError}:
+	${3:pass}
+else:
+	${4:pass}
+finally:
+	${5:pass}
+$0
+endsnippet
+
+#########
+# LOOPS #
+#########
+
+snippet inf "Infinite loop"
+while True:
+	${1:pass}
+$0
+endsnippet
+
+snippet while "While loop"
+while ${1:condition}:
+	${2:pass}
+$0
+endsnippet
+
+snippet for "For loop"
+for ${1:iterator} in ${2:iterable}:
+	${3:pass}
+endsnippet
+
+snippet fornum "Numeric for loop"
+for ${1:i} in range(${2:10}):
+	${3:pass}
+$0
+endsnippet
+
+snippet forenum "Enumeration for loop"
+for ${1:i} in enumerate(${3:iterable}):
+	${3:pass}
+$0
+endsnippet
+
+snippet lcomp "List comprehension"
+[${1:list_element} for ${2:iterator} in ${3:iterable}]$0
+endsnippet
+
+snippet dcomp "Dictionary comprehension"
+{${1:dict_key}: ${2:dict_value} for ${3:iterator} in ${4:iterable}}$0
+endsnippet

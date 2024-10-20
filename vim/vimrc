@@ -51,8 +51,10 @@ let g:tex_flavor = 'latex'
 
 " UltiSnips stuff
 let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
-let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+"let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpOrExpandTrigger = '<Tab>'    " If can both exapnd and jump, prioritize jumping
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+let g:UltiSnipsListSnippets = '<c-Tab>'         " use Ctrl-Tab to list snippets
 let g:UltiSnipsSnippetDirectories = [$HOME.'/preferences/vim/my-snippets']  " Set custom UltiSnips location
 
 " Numbers.vim stuff
