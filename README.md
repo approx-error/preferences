@@ -58,7 +58,7 @@ ln --symbolic ~/preferences/vim/ftplugin ~/.vim
 ```
 
 ```sh
-ln --symbolic ~/preferences/vim/ftplugin ~/.vim
+ln --symbolic ~/preferences/vim/plugged ~/.vim
 ```
 
 This has the same motivation as step 3 where we're letting Vim search for these directories in the default place and linking them so somewhere else.
