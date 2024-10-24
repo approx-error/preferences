@@ -27,8 +27,9 @@ set tabstop=4	" Tab width
 set showmode
 set showcmd
 
-" Allow putting 1000 lines at most (<1000)
-set viminfo='100,<1000,s100,h
+" Allow putting 1000 lines at most (<1000) and store viminfo in
+" XDG compatible location
+set viminfo='100,<1000,s100,h,n~/.local/state/vim/viminfo
 
 " Make :find command into a fuzzy finder
 set path+=**	" Adds ** to the path variable, so wim searches recursively through directories when using the :find command

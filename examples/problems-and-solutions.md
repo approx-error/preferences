@@ -56,5 +56,17 @@ If you DO want variables to save, initialize:
 or explicitly
 `integer, save :: i = 0`
 
+## PIP vs. apt install
 
+Python packages should be installed with:
+
+`sudo apt install python3-<package>`
+
+## Program asks to be installed in a read only directory
+
+I installed TeXLive into /usr/local/, as they suggested, but had to force it with sudo as I don't
+have write privileges there. This lead to me not being able to add texlive to PATH and my system
+couldn't find the newly installed packages. What worked was installing it into ~/local/texlive/
+since there I do have write privileges and I could add it to path. Now everything works! Lesson:
+Install stuff you need to be in PATH to directories where you have write privileges.
 
