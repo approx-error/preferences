@@ -205,6 +205,8 @@ for you to be able to use them.
     - A rainbow-colored stegosaurus that says a fortune everytime you open bash (requires the following packages: fortune, figlet, cowsay and lolcat)
     - Some alias definitions (especially note the 'sympy' alias which calls one of the scripts included in this repository)
     - A lot of environment variables to make various programs save files to specified places and make tex be able to find packages
+- My .bash\_profile file (bash\_profile)
+- My .bash\_logout file (bash\_logout)
 
 ### Python files
 
