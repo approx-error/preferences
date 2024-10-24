@@ -80,13 +80,15 @@ This has the same motivation as step 3 where we're letting Vim search for these 
 mkdir ~/.local/state/vim/
 ```
 
+Read the beginning of the bash setup section for the motivation behind this.
+
 8. Rename and move your .viminfo file to the directory you just made:
 
 ```sh
 mv ~/.viminfo ~/.local/state/vim/viminfo
 ```
 
-Vim will now write all vim info there instead of to a file in your home directory making it less cluttered.
+Vim will now write all vim info there instead of to a file in your home directory.
 
 Now you're all set to begin using the setup! For specific tutorials on how the plugins and snippets actually work, I recommend [this fantastic tutorial](https://ejmastnak.com/tutorials/vim-latex/intro/) 
 by Elijan Mastnak on supercharged mathematical typesetting. It covers the vim-plug plugin manager, the vimtex and ultisnips plugins and much, much more. Another great resource for awesome latex snippets is Gilles Castel's
