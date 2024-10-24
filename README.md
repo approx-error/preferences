@@ -219,7 +219,7 @@ python 3.13 even though it fixes this problem)
 
 ### Scripts
 
-- A simple python script to initiate a sympy session in terminal for symbolic calculations
+- A simple python script to initiate a sympy session in terminal for symbolic calculations (The bashrc in this repository file defines a handy alias for this script)
 
 ### Examples
 
