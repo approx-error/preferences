@@ -124,6 +124,7 @@ fortune | figlet -ct -f future | cowsay -n -f stegosaurus | lolcat -a -d 1
 alias utrm='cd ~/code/utrm/src && python3 utrm.py'
 alias sympy='cd ~/preferences/scripts && python3 -i sympy_session.py && cd'
 alias conv='cd ~/preferences/scripts/unitconverter && python3 unitconverter.py'
+alias ode='cd ~/preferences/scripts/odesolver && python3 odesolver.py'
 
 # PATH specification
 export PATH=$HOME/local/texlive/2024/bin/x86_64-linux:$PATH
