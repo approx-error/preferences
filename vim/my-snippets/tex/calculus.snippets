@@ -66,6 +66,11 @@ snippet pad "Partial differential" i
 \\partial{$1}$0
 endsnippet
 
+context "math()"
+snippet totd "Total differential for 2 variable function" i
+\\totdf{${1:x}}{${2:y}}{${3:z}}
+endsnippet
+
 
 ###################
 # DIFFERENTIATION #
@@ -97,7 +102,7 @@ endsnippet
 ####################
 
 context "math()"
-snippet td "Time derivative" i
+snippet td "Time derivative"
 \\odv{${1:x}}{t}$0
 endsnippet
 
@@ -203,6 +208,11 @@ endsnippet
 context "math()"
 snippet pmnd "Partial mixed nth derivative" i
 \\pdv[order = {${1:orders}}]{${2:f}}{${3:var1},${4:var2},$5}$0
+endsnippet
+
+context "math()"
+snippet pcd "Partial derivative with some variable held constant" i
+\\partc{${1:f}}{${2:x}}{${3:y}}$0
 endsnippet
 
 ###########################
