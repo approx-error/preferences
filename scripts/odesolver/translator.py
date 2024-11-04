@@ -5,18 +5,6 @@ import copy
 import constants as cts
 import sympy as sp
 
-#def clear_duplicates(list_to_clear: list, list_to_check_against: list[str]) -> list:
-    #'''
-    #Clear all items found in 'list_to_check_against' from 'list_to_clear'.
-    #This function creates a copy of the list to clear and so the original list is retained.
-    #'''
-    #copied_list_to_clear = copy.copy(list_to_clear)
-    #for item in copied_list_to_clear:
-        #if item in list_to_check_against:
-            #copied_list_to_clear.remove(item)
-
-    #return copied_list_to_clear
-
 
 def create_sympy_objects(list_of_labels: list, object_type: str = 'symbol') -> dict:
     '''
@@ -73,6 +61,7 @@ def translate(parsed_input, debug = False):
         equation_and_ics.append(ic)
 
     # Generate sympy representations
+    de_order = 0
     left_hand_side_terms = [[] for _ in range(len(equation_and_ics))]
     right_hand_side_terms = [[] for _ in range(len(equation_and_ics))]
     for i, relation in enumerate(equation_and_ics):
@@ -105,6 +94,8 @@ def translate(parsed_input, debug = False):
                         variable = str(elementary[symbol])
                     case '%':
                         order = obj.count('\'')
+                        if order > de_order:
+                            de_order = order
                         if i == 0:
                             if order == 0:
                                 variable = str(func(var))
@@ -138,10 +129,17 @@ def translate(parsed_input, debug = False):
 
     equation = sp.Eq(sympy_lhs[0], sympy_rhs[0])
 
+    constant_count = de_order
     if encoded_ics:
         initial_conditions = {sympy_lhs[i]: sympy_rhs[i] for i in range(1, len(equation_and_ics))}
+        constant_count -= len(initial_conditions)
     else:
         initial_conditions = 0
+    
+    constants = dict()
+    for i in range(1, constant_count + 1):
+        constants[f'C{i}'] = sp.Symbol(f'C{i}')
+
 
     if debug:
         print(30*'-', 'BEGIN TRANSLATOR DEBUG INFORMATION', 30*'-') 
@@ -172,7 +170,10 @@ def translate(parsed_input, debug = False):
         print()
         sp.pprint(initial_conditions)
         print()
+        print('INTEGRATION CONSTANTS THAT WILL BE GENERATED')
+        sp.pprint(constants)
+        print()
         print(32*'-', 'END TRANSLATOR DEBUG INFORMATION', 32*'-') 
 
-    return (latin | greek, var, func, equation, initial_conditions)
+    return (latin | greek | constants, var, func, equation, initial_conditions)
 

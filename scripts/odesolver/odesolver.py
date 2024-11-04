@@ -10,7 +10,7 @@ import solverplotter as sp
 def main(cmd_arguments):
 
     usage_str ='''\
-This ODE solver will try to solve a given ODE using sympy's desolve()-function as a backend.
+This ODE solver will try to solve a given ODE using sympy's dsolve()-function as a backend.
 Once executed correctly, the requested equation will be shown along with its classification and
 the initial conditions given (if they were given). Next the equation will be solved and a solution
 will be printed in an easy-to-read format as well as in a LaTeX format. Finally a plot will be drawn
@@ -26,7 +26,7 @@ FLAGS:
 
 -v or --version to print the version
 
--np or --no-plot to disable plotting (AS OF THE CURRENT VERSION PLOTTING ISN'T SUPPORTED ANYWAY SO IRRELEVANT)
+-np or --no-plot to disable plotting the solution 
 
 -e=EQUATION or --equation=EQUATION to make ode solve a sample equation thats already stored in memory.
 Current list of sample equations:
@@ -86,7 +86,7 @@ Numbers that are inside parentheses might not get appended with multiplication s
     EQUATIONS = {'basic': "f'(x) = f(x)", 'harmonic': "f''(x) = -{ome}^2f(x)", 'cauchy_euler': "x^2f''(x) + axf'(x) + by = 0", 
                  'bessel': "x^2f''(x) + xf'(x) + (x^2 - {alp}^2)f(x) = 0", 'legendre': "(1 - x^2)f''(x) - 2xf'(x) + n(n + 1)f(x) = 0"}
     DEBUG = False
-    PLOT = True # TODO: Implement plotting choice flag
+    PLOT = True
     input_to_parse = ''
     if len(cmd_arguments) == 0: 
         print(usage_str)
@@ -102,7 +102,7 @@ Numbers that are inside parentheses might not get appended with multiplication s
         if '-d' in flags or '--debug' in flags:
             DEBUG = True
         if '-np' in flags or '--no-plot' in flags: 
-            PLOT = False # TODO: This isn't actually passed to anything yet
+            PLOT = False
         for flag in flags:
             if '-e' in flag or '--equation' in flag:
                 equality = flag.find('=')
@@ -119,7 +119,7 @@ Numbers that are inside parentheses might not get appended with multiplication s
 
     parsed_input = ip.inputparse(input_to_parse, debug=DEBUG)
     translated_input = tr.translate(parsed_input, debug=DEBUG)
-    sp.solve_and_plot(translated_input, debug=DEBUG)
+    sp.solve_and_plot(translated_input, debug=DEBUG, plot=PLOT)
     return
 
 
