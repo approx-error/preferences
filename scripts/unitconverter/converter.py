@@ -75,7 +75,14 @@ def convert_unit(value: float, unit: list[str], target_unit: list[str], sig_figs
     target_prefix_value = parsed_target_unit[0]
     target_conversion_factor = parsed_target_unit[1]
 
-    new_value = value * prefix_value * si_conversion_factor / target_conversion_factor / target_prefix_value
+    multiplicity = 1
+    category = unit[0]
+    if category == 'A':
+        multiplicity = 2
+    elif category == 'V':
+        multiplicity = 3
+
+    new_value = value * (prefix_value ** multiplicity) * si_conversion_factor / target_conversion_factor / (target_prefix_value ** multiplicity)
 
     if target_unit[1] == '-':
         target_unit[1] = ''
