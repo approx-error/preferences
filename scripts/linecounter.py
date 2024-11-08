@@ -7,6 +7,7 @@ import glob
 
 flags = sys.argv[1:]
 
+caveat = ''
 output = True
 
 if not flags:
@@ -38,6 +39,7 @@ else:
                 nb_files += non_binary.stdout
         case ['-r'] | ['--recursive']:
             output_str = 'Lines of text in current directory and all subdirectories excluding hidden ones:'
+            caveat = '\nNOTE: Hidden files and directories are only ignored in the starting directory' 
             # Search for the wildcard '.' pattern in all non-binary files recursively and return the filename if the pattern is found
             # Effectively returns a list of all the non-binary files within the directory and its subdirectories
             # The `ls` makes sure that only non-hidden directories and files are listed. FIXME: This only applies on the first directory level
@@ -46,12 +48,10 @@ else:
             for file in cd_files:
                 non_binary = subprocess.run(['grep', '-rlI', '.', file], capture_output=True, text=True)
                 nb_files += non_binary.stdout
-            print(nb_files)
         case ['-r', '-h'] | ['-h', '-r'] | ['--recursive', '--hidden'] | ['--hidden', '--recursive']:
             output_str = 'Lines of text in current directory and all subdirectories including hidden ones:'
             non_binaries = subprocess.run(['grep', '-rlI', '.'], capture_output=True, text=True)
             nb_files = non_binaries.stdout
-            print(nb_files)
         case _:
             output = False
 
@@ -62,12 +62,18 @@ if output:
 
     all_file_contents = ''
     for file in nb_list:
-        single_file_contents = subprocess.run(['cat', f'{file}'], capture_output=True, text=True)
+        try:
+            single_file_contents = subprocess.run(['cat', f'{file}'], capture_output=True, text=True)
+        except UnicodeDecodeError:
+            continue
         all_file_contents += single_file_contents.stdout
 
     lines_counted = subprocess.run(['wc', '-l'], capture_output=True, text=True, input=all_file_contents)
     line_count = lines_counted.stdout.strip('\n')
-    print(output_str, line_count)
+    if caveat:
+        print(output_str, line_count, caveat)
+    else:
+        print(output_str, line_count)
 else:
     print('\nUSAGE:\n\nlinec [OPTIONAL FLAGS]\n\nFLAGS:\n\n -r, --recursive: list lines in subdirectories as well\n -h, --hidden: include hidden files and directories.\
 \n\nNOTE: Hidden files and directories are currently only ignored in the starting directory')
