@@ -9,7 +9,6 @@ flags = sys.argv[1:]
 
 output = True
 
-print(a)
 if not flags:
     output_str = 'Lines of text in current directory excluding hidden files:'
     # List directory contents with slashes denoting directories and filter
