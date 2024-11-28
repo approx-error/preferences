@@ -1,4 +1,4 @@
-" Python filetype specifications
+" Python filetype specifications 
 
 " Set tab width to four spaces
 set tabstop=4

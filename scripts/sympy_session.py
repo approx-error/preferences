@@ -1,5 +1,7 @@
 # Initiate a sympy session
 
+import pythonrc
+
 # NOTE: For a more convenient user experience I have the following alias defined in my .bashrc file:
 # alias sympy='cd && python -i sympy_session.py'
 # This alias navigates to home and runs this script interactively (that's the -i flag) so that

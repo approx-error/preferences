@@ -1,0 +1,6 @@
+# Aliases for bash
+
+alias utrm='cd ~/code/utrm/src && python3 utrm.py'
+alias sympy='cd ~/preferences/scripts && python3 -i sympy_session.py && cd'
+alias conv='cd ~/preferences/scripts/unitconverter && python3 unitconverter.py'
+alias ode='cd ~/preferences/scripts/odesolver && python3 odesolver.py'

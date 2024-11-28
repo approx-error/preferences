@@ -134,14 +134,15 @@ mv .python_history ~/.local/state/python/python-history
 mv .gtkrc-2.0 ~/.confic/gtk-2.0/gtkrc
 ```
 
-4. Configure the actual bashrc (and bash\_profile and bash\_logout) and pythonrc files by making sure your own bash and python related
+4. Configure the actual bashrc (and bash\_aliases and bash\_profile and bash\_logout) and pythonrc files by making sure your own bash and python related
 rc files are safe or merged with mine, and are NOT stored in your home directory. The configuration is done similarly to the vimrc file by making symbolic links:
 
 ```sh
 ln --symbolic ~/preferences/bash/bashrc ~/.bashrc
+ln --symbolic ~/preferences/bash/bash_aliases ~/.bash_aliases
 ln --symbolic ~/preferences/bash/bash_profile ~/.bash_profile
 ln --symbolic ~/preferences/bash/bash_logout ~/.bash_logout
-ln --symbolic ~/preferences/python/pythonrc.py ~/.config/python/pythonrc.py
+ln --symbolic ~/preferences/scripts/pythonrc.py ~/.config/python/pythonrc.py
 ```
 
 5. Source the new bashrc and thus update environment variables etc. by running:
@@ -181,6 +182,9 @@ for you to be able to use them.
     - [numbers.vim](https://github.com/myusuf3/numbers.vim)
     - [vimtex](https://github.com/lervag/vimtex)
     - [ultisnips](https://github.com/SirVer/ultisnips)
+    - [gruvbox](https://github.com/morhetz/gruvbox) (The colorscheme I currently use)
+    - [PaperColor](https://github.com/NLKNguyen/papercolor-theme) (Another colorscheme)
+    - [Solarized 8](https://github.com/lifepillar/vim-solarized8) (Yet another colorscheme)
 - Filetype specific configuration files (ftplugin/)
 	- Python (Set the tab width to 4 spaces since that is required by python)
 	- Fortran (Set the tab width to 2 spaces. I prefer this look in fortran programs)
@@ -192,6 +196,7 @@ for you to be able to use them.
     - Fortran snippets
     - GNU Make snippets
 	- Snippets for making new snippets (snippets.snippets)
+    - C snippets (TBA)
 	- Vimscript snippets (TBA)
     - Shell script snippets (TBA)
     - HTML snippets (TBA)
@@ -203,17 +208,11 @@ for you to be able to use them.
 - My .bashrc file (bashrc)
     - The stuff that was already there once I started editing it
     - A rainbow-colored stegosaurus that says a fortune everytime you open bash (requires the following packages: fortune, figlet, cowsay and lolcat)
-    - Some alias definitions (especially note the 'sympy' alias which calls one of the scripts included in this repository)
     - A lot of environment variables to make various programs save files to specified places and make tex be able to find packages
+- My .bash\_aliases file (bash\_aliases)
+    - As the name suggests, contains alias definitions (especially note the 'sympy' alias which calls one of the scripts included in this repository)
 - My .bash\_profile file (bash\_profile)
 - My .bash\_logout file (bash\_logout)
-
-### Python files
-
-- My python startup file (pythonrc.py)
-    - Currently makes it so that python versions 3.4 - 3.12 inclusive can save python interpreter history to some non-default location
-(Read the beginning of the section using the bash setup for my file location philosophy and the very end of that same section for what's going on with python 3.4 to 3.12 and why I'm not yet using
-python 3.13 even though it fixes this problem)
 
 ### TeX files
 
@@ -221,6 +220,10 @@ python 3.13 even though it fixes this problem)
 
 ### Scripts
 
+- My python startup file (pythonrc.py)
+    - Currently makes it so that python versions 3.4 - 3.12 inclusive can save python interpreter history to some non-default location
+(Read the beginning of the section using the bash setup for my file location philosophy and the very end of that same section for what's going on with python 3.4 to 3.12 and why I'm not yet using
+python 3.13 even though it fixes this problem)
 - A simple python script to initiate a sympy session in terminal for symbolic calculations (The bashrc in this repository file defines a handy alias for this script)
 - A simple unit converteer (The bashrc also defines a handy alias for it)
 

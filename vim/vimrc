@@ -9,7 +9,9 @@ filetype indent on
 " Character encoding, syntax highlighting and colorscheme
 set encoding=utf-8
 syntax on
-colorscheme habamax
+set background=dark
+"set background=light
+" colorscheme habamax
 
 " Line numbering and highlighting
 set number
@@ -18,9 +20,9 @@ set cursorline
 " set cursorcolumn
 
 " Expanding tabs, indentation and shifting text
-set expandtab	" Tabs expand as spaces (actual tab with Ctrl+V+Tab) 
+set expandtab	" Tabs expand as spaces (actual tab with ^v+Tab)  
 set shiftwidth=4	" Shifting text in visual mode with < and >
-set tabstop=4	" Tab width
+set tabstop=4	" Tab width measured in spaces
 
 
 " Show current mode and commands
@@ -32,8 +34,8 @@ set showcmd
 set viminfo='100,<1000,s100,h,n~/.local/state/vim/viminfo
 
 " Make :find command into a fuzzy finder
-set path+=**	" Adds ** to the path variable, so wim searches recursively through directories when using the :find command
-set wildmenu	" Adds a menu to the :find command
+set path+=**	" Adds ** to the path variable, so vim searches recursively through directories when using the :find command
+set wildmenu	" Adds a tab-completion menu to commands including the :find command
 
 " PLUGINS
 call plug#begin()
@@ -41,7 +43,23 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'SirVer/ultisnips'
 	Plug 'myusuf3/numbers.vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'lifepillar/vim-solarized8'
 call plug#end()
+
+" Third party colorschemes
+
+" Gruvbox (light/dark):
+autocmd vimenter * ++nested colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
+"let g:gruvbox_contrast_light = 'medium'
+
+" Papercolor (light/dark):
+" colorscheme PaperColor
+
+" Solarized8 (light/dark):
+" autocmd vimenter * ++nested colorscheme solarized8
 
 " vimtex stuff
 let g:tex_flavor = 'latex'
