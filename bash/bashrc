@@ -120,6 +120,16 @@ fi
 
 fortune | figlet -ct -f future | cowsay -n -f stegosaurus | lolcat -a -d 1
 
+<<<<<<< HEAD
+=======
+# aliases
+alias utrm='cd ~/code/utrm/src && python3 utrm.py'
+alias sympy='cd ~/preferences/scripts && python3 -i sympy_session.py && cd'
+alias conv='cd ~/preferences/scripts/unitconverter && python3 unitconverter.py'
+alias ode='cd ~/preferences/scripts/odesolver && python3 odesolver.py'
+alias linec='python3 ~/preferences/scripts/linecounter.py'
+
+>>>>>>> e7abc80a7c70afccdb9fe3535eb9d192b0dae621
 # PATH specification
 export PATH=$HOME/local/texlive/2024/bin/x86_64-linux:$PATH
 

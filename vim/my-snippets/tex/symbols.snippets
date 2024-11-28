@@ -57,6 +57,15 @@ snippet bullet "Bullet" Ai
 \\bullet$0
 endsnippet
 
+context "math()"
+snippet qua "Quad separator" Ai
+\\quad$0
+endsnippet
+
+context "math()"
+snippet 2qu "Double qquad separator" Ai
+\\qquad$0
+endsnippet
 
 # ------------------------------
 
@@ -73,17 +82,17 @@ endsnippet
 # ------------------------------
 
 context "math()"
-snippet in "set membership" i
+snippet in "set membership"
 \\in$0
 endsnippet
 
 context "math()"
-snippet ni "set membership in other direction" i
+snippet ni "set membership in other direction"
 \\ni$0
 endsnippet
 
 context "math()"
-snippet nin "Not contained in" i
+snippet nin "Not contained in"
 \\notin$0
 endsnippet
 
@@ -155,6 +164,11 @@ snippet == "Aligned Equals sign &= in align-environments" Ai
 endsnippet
 
 context "math()"
+snippet qq "Algined quad &\quad in align-environments" Ai
+&\\quad$0
+endsnippet
+
+context "math()"
 snippet != "Not equal to" Ai
 \\neq$0
 endsnippet
@@ -180,7 +194,7 @@ snippet sim "Similar to or asymptotically equal to" Ai
 endsnippet
 
 context "math()"
-snippet nsm "Not similat" Ai
+snippet nsm "Not similar" Ai
 \\nsim$0
 endsnippet
 
@@ -239,6 +253,11 @@ snippet mpl "implies" Ai
 \\implies$0
 endsnippet
 
+context "math()"
+snippet to "Right arrow" Ai
+\\to$0
+endsnippet
+
 #################
 # Misc. letters #
 #################
@@ -266,6 +285,16 @@ endsnippet
 context "math()"
 snippet gimel "gimel" Ai
 \\gimel$0
+endsnippet
+
+context "math()"
+snippet ham "Calligraphic H for the Hamiltonian or Hilbert space" Ai
+\\ham$0
+endsnippet
+
+context "math()"
+snippet lag "Calligraphic L for the Lagrangian" Ai
+\\lag$0
 endsnippet
 
 #################

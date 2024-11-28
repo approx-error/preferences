@@ -58,7 +58,7 @@ or explicitly
 
 ## PIP vs. apt install
 
-Python packages should be installed with:
+If you want global access to python packages, they should be installed with:
 
 `sudo apt install python3-<package>`
 
@@ -69,4 +69,12 @@ have write privileges there. This lead to me not being able to add texlive to PA
 couldn't find the newly installed packages. What worked was installing it into ~/local/texlive/
 since there I do have write privileges and I could add it to path. Now everything works! Lesson:
 Install stuff you need to be in PATH to directories where you have write privileges.
+
+## Numpy arrays are risky for processing string data
+
+When a numpy array storing strings is created, the maximun string length EVER allowed in the array
+is the length of the longest string in the array. This means that if you try to replace some string
+with a new string that is longer than the current longest string, the new string WILL be truncated.
+This goes to show that numpy arrays should not be used as is when dealing with variable length strings
+especially if you don't know the length of strings that might be stored in the array later on.
 
