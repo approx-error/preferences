@@ -143,4 +143,7 @@ export PYTHON_HISTORY=$XDG_STATE_HOME"/python/python-history"
 export GTK2_RC_FILES=$XDG_CONFIG_HOME"/gtk-2.0/gtkrc"
 export PYTHONSTARTUP=$XDG_CONFIG_HOME"/python/pythonrc.py" # This file fixes the python history thing so until python 3.13 the code in it that deals with that will be necessary
 
+# Data files
+export WINEPREFIX=$XDG_DATA_HOME/wineprefixes/tr_2
+
 # --------------------- END ADDITIONS BY APPROX-ERROR ---------------------------
