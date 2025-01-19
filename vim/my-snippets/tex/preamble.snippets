@@ -345,4 +345,81 @@ $1
 \\end{document}
 endsnippet
 
+snippet crossw "Template for crossword puzzle typesetting" Ab
+\\documentclass{article}
+\\usepackage[a4paper, textwidth=205mm, textheight=297mm]{geometry}
+\\usepackage[finnish]{babel}
+\\usepackage[large]{cwpuzzle}
+\\usepackage{savesym}
+\\usepackage{color}
+\\usepackage{graphicx}
+\\usepackage{bbding}
+\\savesymbol{Asterisk}
+\\usepackage{mathabx}
+\\restoresymbol{M}{Asterisk}
 
+\\def\\PuzzleThickline{\\linethickness{1pt}}
+
+\\definecolor{myteal}{rgb}{0.38, 0.79, 0.71}
+\\PuzzleDefineColorCell{c}{myteal}
+
+\\input{../use/cw-commands.tex}
+$1
+\\title{\\huge{$2}}
+\\author{$3}
+\\date{}
+
+\\begin{document}
+
+    \\maketitle
+    
+    \\begin{Puzzle}{${4:width}}{${5:height}}
+		% FRAMES
+
+		% Frame arguments: lower left x (>= 0), lower left y (>= 0), width (>= 1), height (>= 1), contents
+
+		% Main picture frame
+		\\Frame{x}{y}{w}{h}{\\incg{}}
+
+		% Arrow frames
+		\\Frame{x}{y}{1}{1}{arrow}
+		% etc.
+
+		% Ornament frames
+
+		% Edge frames
+		\\Frame{x}{y}{1}{1}{clue}
+		% etc.
+
+		% Middle frames
+		\\Frame{x}{y}{1}{1}{clue}
+		% etc.
+		
+		% PUZZLE GRID
+
+		|{}       |{}      |{}      |.
+		|{}       |{}      |{}      |.
+		|{}       |{}      |{}      |.
+		|{}       |{}      |{}      |.
+		% etc.
+
+
+	\\end{Puzzle}
+
+	\\begin{center}
+		\\huge{$6}
+	\\end{center}
+
+	\\begin{PuzzleClues}{\\textbf{$7}}
+		\Clue{\\textbf{num}}{sol}{clue}
+	\\end{PuzzleClues}
+	\\begin{PuzzleClues}{\\textbf{$8}}
+		\Clue{\\textbf{num}}{sol}{clue}
+	\\end{PuzzleClues}
+
+	\\begin{center}
+		$9
+	\\end{center}
+
+\\end{document}
+endsnippet
