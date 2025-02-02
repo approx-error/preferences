@@ -20,7 +20,7 @@ Usage:
 
 Write "-" to leave prefix, unit, and/or significant figures blank if applicable.
 
-If no target prefix or unit is provided but instead the number of significant figures is written after the arrow,
+If no target prefix or unit is provided but instead the number of significant figures is written after 'to',
 the input value will be truncated to the specified precision
 
 

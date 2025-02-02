@@ -1,0 +1,5 @@
+import sys
+import pathlib
+
+module_path = pathlib.Path('~/.local/lib/ode').expanduser()
+sys.path.insert(0, module_path)

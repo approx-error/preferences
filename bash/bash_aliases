@@ -1,12 +1,23 @@
 # Aliases for bash
 
 alias utrm='cd ~/code/tools/utrm/src && python3 utrm.py'
-alias sympy='cd ~/preferences/scripts && python3 -i sympy_session.py && cd'
-alias conv='cd ~/preferences/scripts/unitconverter && python3 unitconverter.py'
-alias ode='cd ~/preferences/scripts/odesolver && python3 odesolver.py'
-alias linec='python3 ~/preferences/scripts/linecounter.py'
 alias go-trII-exe='cd ~/.steam/debian-installation/steamapps/common/Tomb\ Raider\ \(II\)/'
 alias go-trII-sav='cd ~/gaming/trII/savegames'
+alias go-tmnf-repl='cd ~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Replays'
+alias go-tmnf-chal='cd ~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Challenges/Downloaded'
+alias mv-tmnf-repl='mv ~/downl/*.Replay.Gbx ~/downl/*.Replay.gbx ~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Replays'
+alias mv-tmnf-chal='mv ~/downl/*.Challenge.Gbx ~/downl/*.Challenge.gbx ~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Challenges/Downloaded'
+alias use-wine-32='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine32'
+alias use-wine-trII='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/trII'
+alias use-wine-64='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine64'
+alias trII-run='go-trII-exe && use-wine-trII wine Tomb2.exe'
+alias trII-setup='use-wine-trII wine "$trIIexe/Tomb2.exe" -setup'
+alias trII-first-16='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/first-16/savegame.* "$trIIexe"'
+alias trII-last-16='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/last-16/savegame.* "$trIIexe"'
+alias trII-china-venice='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/china+venice/savegame.* "$trIIexe"'
+alias trII-offshore-ship='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/offshore+sunken-ship/savegame.* "$trIIexe"'
+alias trII-tibet='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/tibet/savegame.* "$trIIexe"'
+alias trII-china-home='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/china-home/savegame.* "$trIIexe"'
 
 # Bulk rename commands: 
 # usage: [COMMAND] [FILE(S)/PATTERN]

@@ -79,9 +79,30 @@ To go forwar by one line of assembly code, type
 nexti
 ```
 
-for "next instruction". To quit the debugging process type
+for "next instruction". To refresh the view type
+
+```sh
+ref
+```
+
+To quit the debugging process type
 
 ```sh
 quit
 ```
+
+If/when the program crashes, you can get information about the moment the crash happened
+by typing
+
+```sh
+x/i $pc
+```
+
+And by typing
+
+```sh
+info registers
+```
+
+To see what values were stored in the registers at the time of the crash
 

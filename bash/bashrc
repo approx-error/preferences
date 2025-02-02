@@ -125,9 +125,12 @@ shopt -s cdable_vars
 trIIexe=~/.steam/debian-installation/steamapps/common/Tomb\ Raider\ \(II\)/
 trIIsav=~/gaming/trII/savegames
 
+tmnf_repl=~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Replays
+tmnf_chal=~/.steam/debian-installation/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/Documents/TrackMania/Tracks/Challenges/Downloaded
+
 # PATH specification
-export PATH=$HOME/local/ziglang:$PATH
-export PATH=$HOME/local/texlive/2024/bin/x86_64-linux:$PATH
+export PATH=$HOME/.local/bin/texlive/2024/bin/x86_64-linux:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # EDITOR specification
 export EDITOR="/usr/bin/vim"
@@ -148,9 +151,10 @@ export PYTHON_HISTORY=$XDG_STATE_HOME"/python/python-history"
 # Config files
 export GTK2_RC_FILES=$XDG_CONFIG_HOME"/gtk-2.0/gtkrc"
 export PYTHONSTARTUP=$XDG_CONFIG_HOME"/python/pythonrc.py" # This file fixes the python history thing so until python 3.13 the code in it that deals with that will be necessary
+export XINITRC=$XDG_CONFIG_HOME"/X11/xinitrc"
 
 # Data files
-export WINEPREFIX=$XDG_DATA_HOME/wineprefixes/tr_2
+export WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine64
 
 fortune | figlet -ct -f future | cowsay -n -f stegosaurus | lolcat -a -d 1
 
