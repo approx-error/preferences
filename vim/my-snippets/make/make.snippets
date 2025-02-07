@@ -141,6 +141,33 @@ clean:
 	rm -f $(wildcard *.o) $(wildcard *.mod) $(exe_name) $0
 endsnippet
 
+snippet chboiler "C makefile with header dependencies taken care of"
+COMPILER := gcc
+FLAGS := -Wall
+srcdir := ${1:src}
+objdir := ${2:obj}
+main_src := ${3:main.c}
+module_src := ${4:mod.c}
+src_files := $(patsubst %.c,$(srcdir)/%.c, $(module_src)) $(srcdir)/$(main_src)
+obj_files := $(patsubst $(srcdir)/%.c, $(objdir)/%.o, $(src_files))
+dep_files := $(patsubst $(objdir)/%.o, $(objdir)/%.d, $(obj_files))
+exe_name := ${5:exe}
+
+$(exe_name): $(obj_files)
+	@echo Linking object files...
+	$(COMPILER) $(FLAGS) $^ -o $@
+
+-include $(dep_files)
+
+$(objdir)/%.o: $(srcdir)/%.c 
+	@echo Compiling source files...
+	$(COMPILER) $(FLAGS) -MMD -c $< -o $@
+
+clean:
+	@echo Cleaning up...
+	rm $(wildcard $(objdir)/*.o) $(wildcard $(objdir)/*.d) $(exe_name) 
+endsnippet
+
 snippet boiler "General makefile template"
 COMPILER := ${1:gfortran}
 FLAGS := ${2:-Wall -ffree-form -ffree-line-length-none -fimplicit-none -fbackslash}

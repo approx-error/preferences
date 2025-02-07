@@ -10,14 +10,6 @@ alias mv-tmnf-chal='mv ~/downl/*.Challenge.Gbx ~/downl/*.Challenge.gbx ~/.steam/
 alias use-wine-32='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine32'
 alias use-wine-trII='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/trII'
 alias use-wine-64='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine64'
-alias trII-run='go-trII-exe && use-wine-trII wine Tomb2.exe'
-alias trII-setup='use-wine-trII wine "$trIIexe/Tomb2.exe" -setup'
-alias trII-first-16='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/first-16/savegame.* "$trIIexe"'
-alias trII-last-16='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/last-16/savegame.* "$trIIexe"'
-alias trII-china-venice='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/china+venice/savegame.* "$trIIexe"'
-alias trII-offshore-ship='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/offshore+sunken-ship/savegame.* "$trIIexe"'
-alias trII-tibet='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/tibet/savegame.* "$trIIexe"'
-alias trII-china-home='go-trII-exe && rm savegame.* && go-trII-sav && cp 00-custom-collections/china-home/savegame.* "$trIIexe"'
 
 # Bulk rename commands: 
 # usage: [COMMAND] [FILE(S)/PATTERN]
