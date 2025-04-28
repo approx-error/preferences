@@ -11,7 +11,7 @@ set encoding=utf-8
 syntax on
 set background=dark
 "set background=light
-" colorscheme habamax
+"colorscheme habamax
 
 " Line numbering and highlighting
 set number
