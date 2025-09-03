@@ -114,6 +114,16 @@ endsnippet
 # Sections #
 ############
 
+# Usage of the section hieracrhy snippet:
+# 1. Type out the arguments you wish to pass to the function 'section_generator' that is defined above separated by spaces
+# 	 Since the function 'section_generator' has two default value arguments you need to type 1 to 3 strings of characters
+# 2. Enter visual mode and select all the arguments you have typed
+# 3. Press the g:UltiSnipsExpandTrigger button (has been mapped to the TAB key), to store the selection into the $VISUAL variable
+#    You will simultaneously enter insert mode
+# 4. Write the name of the snippet you wish to invoke and press the g:UltiSnipsExpandTrigger button (again, the TAB key) to invoke the snippet
+# 5. The snippet uses the string stored in $VISUAL (accessed as snip.v.text in python) to call the function 'section_generator' and then
+#    prints the output of the function onto the screen with snip.rv
+
 context "math(False)"
 snippet sh "Make a section hierarchy" bi
 $0

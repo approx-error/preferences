@@ -331,9 +331,37 @@ snippet exercise "Template for exercise problem submissions" Ab
 \\usepackage{comment}
 \\usepackage{listingsutf8}
 \\usepackage{color}
-\\usepackage{parskip}
 
 \\input{~/preferences/tex/math-commands.tex}
+$1
+\\title{$2}
+\\author{$3}
+
+\\begin{document}
+	\\normalsize
+	\\maketitle
+	$0
+\\end{document}
+endsnippet
+
+snippet document "Template for general documents" Ab
+\\documentclass{article}
+% Encoding and language
+\\usepackage[T1]{fontenc}
+\\usepackage[utf8]{inputenc}
+\\usepackage{lmodern}
+\\usepackage[finnish]{babel}
+% Page layout
+\\usepackage{lastpage}
+\\usepackage{geometry}
+\\geometry{margin=3cm}
+\\usepackage{parskip}
+% Visuals and code
+\\usepackage{graphicx}
+\\usepackage{subcaption}
+\\usepackage{enumerate}
+\\usepackage{comment}
+
 $1
 \\title{$2}
 \\author{$3}
