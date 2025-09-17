@@ -210,56 +210,36 @@ endsnippet
 # Listings templates #
 ######################
 
-snippet pylist "Add simple syntax highlighting to listings for python" Ab
-\\definecolor{dkgreen}{rgb}{0,0.6,0}
+snippet pylist "Add syntax highlighting to listings for python" Ab
+\\usepackage{MnSymbol}
+\\definecolor{cream}{rgb}{1,0.95,0.95}
 \\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\\definecolor{blu}{rgb}{0.1,0.5,0.8}
 \\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\\lstset{frame=tb,
-	language=Python,
-	aboveskip=3mm,
-	belowskip=3mm,
-	showstringspaces=false,
-	columns=flexible,
-	basicstyle={\\small\\ttfamily},
-	numbers=none,
-	numberstyle=\\tiny\\color{gray},
-	keywordstyle=\\color{blue},
-	commentstyle=\\color{dkgreen},
-	stringstyle=\\color{mauve},
-	breaklines=true,
-	breakatwhitespace=true,
-	tabsize=3,
-	inputencoding=utf8,
-	extendedchars=true,
-	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
-}
-endsnippet
-
-snippet cuspylist "Add syntax higlighting to listings for python with the ability to add highlighting to user specified words" Ab
+\\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
 \\definecolor{dkgreen}{rgb}{0,0.6,0}
-\\definecolor{cream}{rgb}{1,0.95,0.9}
-\\definecolor{mauve}{rgb}{0.58,0,0.82}
-\\definecolor{red}{rgb}{0.5,0,0}
-\\definecolor{yel}{rgb}{1,0.7,0.1}
 
 \\lstset{
-	frame=tb,
 	language=Python,
+	frame=tb,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
+	linewidth=\\textwidth,
 	basicstyle={\\small\\ttfamily},
-	numbers=none,
-	morekeywords={INSERT COMMA SEPARATED LIST OF KEYWORDS/FUNCTIONS ETC. TO BE EMPHASIZED},
-	keywordstyle=\\color{blue},
-	emph={INSERT COMMA SEPARATED LIST OF VARIABLES TO BE EMPHASIZED},
-	emphstyle=\\color{mauve},
 	backgroundcolor=\\color{cream},
-	numberstyle=\\color{red},
-	commentstyle=\\color{dkgreen},
-	stringstyle=\\color{yel},
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\\tiny\\ttfamily\\color{gray},
+	morekeywords={as},
+	keywordstyle=\\color{blu},
+	emph={},
+	emphstyle=\\color{mauve},
+	commentstyle=\\color{dkgray},
+	stringstyle=\\color{dkgreen},
+    prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+    postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
 	breaklines=true,
 	breakatwhitespace=true,
 	tabsize=3,
@@ -270,29 +250,35 @@ snippet cuspylist "Add syntax higlighting to listings for python with the abilit
 endsnippet
 
 snippet fortlist "Add syntax highlighting to listings for fortran" Ab
-\\definecolor{dkgreen}{rgb}{0,0.6,0}
-\\definecolor{cream}{rgb}{1,0.95,0.9}
+\\usepackage{MnSymbol}
+\\definecolor{cream}{rgb}{1,0.95,0.95}
+\\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\\definecolor{blu}{rgb}{0.1,0.5,0.8}
 \\definecolor{mauve}{rgb}{0.58,0,0.82}
-\\definecolor{red}{rgb}{0.5,0,0}
-\\definecolor{yel}{rgb}{1,0.7,0.1}
+\\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
+\\definecolor{dkgreen}{rgb}{0,0.6,0}
 
 \\lstset{
-	frame=tb,
 	language=Fortran,
+	frame=tb,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
+	linewidth=\\textwidth,
 	basicstyle={\\small\\ttfamily},
-	numbers=none,
-	morekeywords={},
-	keywordstyle=\\color{blue},
+	backgroundcolor=\\color{cream},
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\\tiny\\ttfamily\\color{gray},
+	morekeywords={as},
+	keywordstyle=\\color{blu},
 	emph={program, end, print, read, write},
 	emphstyle=\\color{mauve},
-	backgroundcolor=\\color{cream},
-	numberstyle=\\color{red},
-	commentstyle=\\color{dkgreen},
-	stringstyle=\\color{yel},
+	commentstyle=\\color{dkgray},
+	stringstyle=\\color{dkgreen},
+    prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+    postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
 	breaklines=true,
 	breakatwhitespace=true,
 	tabsize=3,
@@ -344,27 +330,34 @@ $1
 \\end{document}
 endsnippet
 
-snippet document "Template for general documents" Ab
+snippet basicdoc "Template for basic document" Ab
 \\documentclass{article}
 % Encoding and language
 \\usepackage[T1]{fontenc}
 \\usepackage[utf8]{inputenc}
 \\usepackage{lmodern}
-\\usepackage[finnish]{babel}
+\\usepackage[${1:british}]{babel}
 % Page layout
 \\usepackage{lastpage}
 \\usepackage{geometry}
 \\geometry{margin=3cm}
 \\usepackage{parskip}
+% Math
+\\usepackage{amssymb}
+% Snippets for other math packages: ppla, pali, pbigi
 % Visuals and code
 \\usepackage{graphicx}
 \\usepackage{subcaption}
 \\usepackage{enumerate}
+\\usepackage{fancyvrb}
 \\usepackage{comment}
+\\usepackage{listingsutf8}
+\\usepackage{color}
+\\usepackage{parskip}
 
-$1
-\\title{$2}
-\\author{$3}
+$2
+\\title{$3}
+\\author{$4}
 
 \\begin{document}
 	\\normalsize
