@@ -13,6 +13,7 @@ alias use-wine-trII='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/trII'
 alias use-wine-tr='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/tr-classic'
 alias use-wine-trVI='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/tr-aod'
 alias use-wine-64='WINEPREFIX=$XDG_DATA_HOME/wineprefixes/wine64'
+alias valg='valgrind --leak-check=full --track-origins=yes'
 
 # Bulk rename commands: 
 # usage: [COMMAND] [FILE(S)/PATTERN]

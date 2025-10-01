@@ -1,0 +1,23 @@
+// Function output value conventions
+
+// 1. Designated output arguments, no return value (The old school way)
+
+function taxicab_dist(int x1, int y1, int x2, int y2, int ptr res) -> void
+    int dist := abs(x1 - y1) + abs(y1 - y2)
+    deref res := dist
+    return 
+end function
+
+// Calling convention
+int res
+taxicab_dist(3, 4, -2, -3, addr res)
+
+// 2. Returning the output value (A more modern way)
+
+function taxicab_dist(int x1, int y1, int x2, int y2) -> int
+    int dist := abs(x1 - y1) + abs(y1 - y2)
+    return dist
+end function
+
+// Calling convention
+int res = taxicab_dist(3, 4, -2, -3)

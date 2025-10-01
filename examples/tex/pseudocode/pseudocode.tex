@@ -1,0 +1,95 @@
+\documentclass{article}
+% Encoding and language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[british]{babel}
+% Page layout
+\usepackage{lastpage}
+\usepackage{geometry}
+\geometry{margin=3cm}
+\usepackage{parskip}
+% Math
+\usepackage{amssymb}
+% Snippets for other math packages: ppla, pali, pbigi
+% Visuals and code
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{fancyvrb}
+\usepackage{comment}
+\usepackage{listingsutf8}
+\usepackage{color}
+\usepackage{parskip}
+
+\usepackage{MnSymbol}
+\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\definecolor{darkbg}{rgb}{0.17,0.16,0.23}
+\definecolor{darktxt}{rgb}{0.8,0.8,0.8}
+\definecolor{darkkw}{rgb}{0.8,0.3,0.1}
+\definecolor{darkem}{rgb}{0.2,0.6,0.9}
+\definecolor{darkcom}{rgb}{0.5,0.5,0.5}
+\definecolor{darkstr}{rgb}{0.5,0.85,0.2}
+
+\lstdefinelanguage{pseudocode}{
+    morekeywords={int, integer, float, str, string, bool, boolean, void,
+        const, constant, ptr, pointer, adr, addr, address, dref, deref, derefer, dereference,
+        array, struct, structure, enum, enumeration, union, type,
+        and, or, not, in, is,
+        if, else, then, switch, case, default,
+        for, foreach, while, end, do, continue, break,
+        func, function, return, include, as, module},
+    emph={true, false, null,
+        print, input, open, read, write,
+        size, length,
+        abs, sqrt, log, sin, cos},
+    sensitive=false, % keywords are not case sensitive
+    morecomment=[l]{//}, % l = line comments
+    morecomment=[s]{/*}{*/}, % s = start and end delimiter
+    morestring=[b]" % Strings are enclosed in double quotes
+}
+
+\lstset{
+    language=pseudocode,
+    frame=tb,
+    framexleftmargin=1mm,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    linewidth=\textwidth,
+    basicstyle=\small\ttfamily\color{darktxt},
+    backgroundcolor=\color{darkbg},
+    numbers=left,
+    numbersep=8pt,
+    numberstyle=\small\ttfamily\color{numbers},
+    %morekeywords={},
+    keywordstyle=\color{darkkw},
+    %emph={},
+    emphstyle=\color{darkem},
+    commentstyle=\color{darkcom},
+    stringstyle=\color{darkstr},
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rhookswarrow}},
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rcurvearrowse\space}},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={ä}{{\"a}}1 {ö}{{\"o}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1
+}
+
+\title{Rendering pseudocode with the listings package}
+\author{Approx-Error}
+
+\begin{document}
+    \normalsize
+    \maketitle
+
+    Here is some highlighted pseudocode from a file displayed using the listings package
+
+    \lstinputlisting[language=pseudocode]{codes/pseudo.sudo}
+
+    The keywords to be highlighted etc. can be defined with the \texttt{\textbackslash lstdefinelenguage\{<language>\}}-command.
+    
+\end{document}

@@ -210,36 +210,38 @@ endsnippet
 # Listings templates #
 ######################
 
-snippet pylist "Add syntax highlighting to listings for python" Ab
+snippet darkpy "Add darkmode syntax highlighting to listings for python" Ab
 \\usepackage{MnSymbol}
-\\definecolor{cream}{rgb}{1,0.95,0.95}
-\\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\\definecolor{blu}{rgb}{0.1,0.5,0.8}
-\\definecolor{mauve}{rgb}{0.58,0,0.82}
-\\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
-\\definecolor{dkgreen}{rgb}{0,0.6,0}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkbg}{rgb}{0.17,0.16,0.23}
+\\definecolor{darktxt}{rgb}{0.8,0.8,0.8}
+\\definecolor{darkkw}{rgb}{0.8,0.3,0.1}
+\\definecolor{darkem}{rgb}{0.2,0.6,0.9}
+\\definecolor{darkcom}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkstr}{rgb}{0.5,0.85,0.2}
 
 \\lstset{
 	language=Python,
 	frame=tb,
+	framexleftmargin=1mm,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
 	linewidth=\\textwidth,
-	basicstyle={\\small\\ttfamily},
-	backgroundcolor=\\color{cream},
+	basicstyle=\\small\\ttfamily\\color{darktxt},
+	backgroundcolor=\\color{darkbg},
 	numbers=left,
-	numbersep=5pt,
-	numberstyle=\\tiny\\ttfamily\\color{gray},
+	numbersep=8pt,
+	numberstyle=\\tiny\\ttfamily\\color{numbers},
 	morekeywords={as},
-	keywordstyle=\\color{blu},
+	keywordstyle=\\color{darkkw},
 	emph={},
-	emphstyle=\\color{mauve},
-	commentstyle=\\color{dkgray},
-	stringstyle=\\color{dkgreen},
-    prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
-    postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	emphstyle=\\color{darkem},
+	commentstyle=\\color{darkcom},
+	stringstyle=\\color{darkstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
 	breaklines=true,
 	breakatwhitespace=true,
 	tabsize=3,
@@ -249,36 +251,235 @@ snippet pylist "Add syntax highlighting to listings for python" Ab
 }
 endsnippet
 
-snippet fortlist "Add syntax highlighting to listings for fortran" Ab
+snippet lightpy "Add lightmode syntax highlighting to listings for python" Ab
 \\usepackage{MnSymbol}
-\\definecolor{cream}{rgb}{1,0.95,0.95}
-\\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\\definecolor{blu}{rgb}{0.1,0.5,0.8}
-\\definecolor{mauve}{rgb}{0.58,0,0.82}
-\\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
-\\definecolor{dkgreen}{rgb}{0,0.6,0}
+\\definecolor{lightbg}{rgb}{1,0.95,0.95}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{lightkw}{rgb}{0.1,0.5,0.8}
+\\definecolor{lgihtem}{rgb}{0.58,0,0.82}
+\\definecolor{lightcom}{rgb}{0.4,0.4,0.4}
+\\definecolor{lightstr}{rgb}{0,0.6,0}
 
 \\lstset{
-	language=Fortran,
+	language=Python,
 	frame=tb,
+	framexleftmargin=1mm,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
 	linewidth=\\textwidth,
-	basicstyle={\\small\\ttfamily},
-	backgroundcolor=\\color{cream},
+	basicstyle=\\small\\ttfamily,
+	backgroundcolor=\\color{lightbg},
 	numbers=left,
 	numbersep=5pt,
-	numberstyle=\\tiny\\ttfamily\\color{gray},
+	numberstyle=\\tiny\\ttfamily\\color{numbers},
 	morekeywords={as},
-	keywordstyle=\\color{blu},
+	keywordstyle=\\color{lightkw},
+	emph={},
+	emphstyle=\\color{lightem},
+	commentstyle=\\color{lightcom},
+	stringstyle=\\color{lightstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet darkfort "Add darkmode syntax highlighting to listings for fortran" Ab
+\\usepackage{MnSymbol}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkbg}{rgb}{0.17,0.16,0.23}
+\\definecolor{darktxt}{rgb}{0.8,0.8,0.8}
+\\definecolor{darkkw}{rgb}{0.8,0.3,0.1}
+\\definecolor{darkem}{rgb}{0.2,0.6,0.9}
+\\definecolor{darkcom}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkstr}{rgb}{0.5,0.85,0.2}
+
+\\lstset{
+	language=Fortran,
+	frame=tb,
+	framexleftmargin=1mm,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	linewidth=\\textwidth,
+	basicstyle=\\small\\ttfamily\\color{darktxt},
+	backgroundcolor=\\color{darkbg},
+	numbers=left,
+	numbersep=8pt,
+	numberstyle=\\tiny\\ttfamily\\color{numbers},
+	morekeywords={},
+	keywordstyle=\\color{darkkw},
 	emph={program, end, print, read, write},
-	emphstyle=\\color{mauve},
-	commentstyle=\\color{dkgray},
-	stringstyle=\\color{dkgreen},
-    prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
-    postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	emphstyle=\\color{darkem},
+	commentstyle=\\color{darkcom},
+	stringstyle=\\color{darkstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet lightfort "Add lightmode syntax highlighting to listings for fortran" Ab
+\\usepackage{MnSymbol}
+\\definecolor{lightbg}{rgb}{1,0.95,0.95}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{lightkw}{rgb}{0.1,0.5,0.8}
+\\definecolor{lgihtem}{rgb}{0.58,0,0.82}
+\\definecolor{lightcom}{rgb}{0.4,0.4,0.4}
+\\definecolor{lightstr}{rgb}{0,0.6,0}
+
+\\lstset{
+	language=Fortran,
+	frame=tb,
+	framexleftmargin=1mm,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	linewidth=\\textwidth,
+	basicstyle=\\small\\ttfamily\\color{lighttxt},
+	backgroundcolor=\\color{lightbg},
+	numbers=left,
+	numbersep=8pt,
+	numberstyle=\\tiny\\ttfamily\\color{numbers},
+	morekeywords={},
+	keywordstyle=\\color{lightkw},
+	emph={program, end, print, read, write},
+	emphstyle=\\color{lightem},
+	commentstyle=\\color{lightcom},
+	stringstyle=\\color{lightstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet darksudo "Add darkmode syntax highlighting to listings for pseudocode" Ab
+\\usepackage{MnSymbol}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkbg}{rgb}{0.17,0.16,0.23}
+\\definecolor{darktxt}{rgb}{0.8,0.8,0.8}
+\\definecolor{darkkw}{rgb}{0.8,0.3,0.1}
+\\definecolor{darkem}{rgb}{0.2,0.6,0.9}
+\\definecolor{darkcom}{rgb}{0.5,0.5,0.5}
+\\definecolor{darkstr}{rgb}{0.5,0.85,0.2}
+
+\\lstdefinelanguage{pseudocode}{
+	morekeywords={int, integer, float, str, string, bool, boolean, void,
+		const, constant, ptr, pointer, adr, addr, address, dref, deref, derefer, dereference,
+		array, struct, structure, enum, enumeration, union, type,
+		and, or, not, in, is,
+		if, else, then, switch, case, default,
+		for, foreach, while, end, do, continue, break,
+		func, function, return, include, as, module},
+	emph={true, false, null,
+		print, input, open, read, write,
+		size, length,
+		abs, sqrt, log, sin, cos},
+	sensitive=false, % keywords are not case sensitive
+	morecomment=[l]{//}, % l = line comments
+	morecomment=[s]{/*}{*/}, % s = start and end delimiter
+	morestring=[b]" % Strings are enclosed in double quotes
+}
+
+\\lstset{
+	language=pseudocode,
+	frame=tb,
+	framexleftmargin=1mm,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	linewidth=\\textwidth,
+	basicstyle=\\small\\ttfamily\\color{darktxt},
+	backgroundcolor=\\color{darkbg},
+	numbers=left,
+	numbersep=8pt,
+	numberstyle=\\small\\ttfamily\\color{numbers},
+	%morekeywords={},
+	keywordstyle=\\color{darkkw},
+	%emph={},
+	emphstyle=\\color{darkem},
+	commentstyle=\\color{darkcom},
+	stringstyle=\\color{darkstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\\"a}}1 {ö}{{\\"o}}1 {Ä}{{\\"A}}1 {Ö}{{\\"O}}1
+}
+endsnippet
+
+snippet lightsudo "Add lightmode syntax highlighting to listings for pseudocode" Ab
+\\usepackage{MnSymbol}
+\\definecolor{lightbg}{rgb}{1,0.95,0.95}
+\\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\\definecolor{lightkw}{rgb}{0.1,0.5,0.8}
+\\definecolor{lgihtem}{rgb}{0.58,0,0.82}
+\\definecolor{lightcom}{rgb}{0.4,0.4,0.4}
+\\definecolor{lightstr}{rgb}{0,0.6,0}
+
+\\lstdefinelanguage{pseudocode}{
+	morekeywords={int, integer, float, str, string, bool, boolean, void,
+		const, constant, ptr, pointer, adr, addr, address, dref, deref, derefer, dereference,
+		array, struct, structure, enum, enumeration, union, type,
+		and, or, not, in, is,
+		if, else, then, switch, case, default,
+		for, foreach, while, end, do, continue, break,
+		func, function, return, include, as, module},
+	emph={true, false, null,
+		print, input, open, read, write,
+		size, length,
+		abs, sqrt, log, sin, cos},
+	sensitive=false, % keywords are not case sensitive
+	morecomment=[l]{//}, % l = line comments
+	morecomment=[s]{/*}{*/}, % s = start and end delimiter
+	morestring=[b]" % Strings are enclosed in double quotes
+}
+
+\\lstset{
+	language=pseudocode,
+	frame=tb,
+	framexleftmargin=1mm,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	linewidth=\\textwidth,
+	basicstyle=\\small\\ttfamily,
+	backgroundcolor=\\color{lightbg},
+	numbers=left,
+	numbersep=8pt,
+	numberstyle=\\small\\ttfamily\\color{numbers},
+	%morekeywords={},
+	keywordstyle=\\color{lightkw},
+	%emph={},
+	emphstyle=\\color{lightem},
+	commentstyle=\\color{lightcom},
+	stringstyle=\\color{lightstr},
+	prebreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rhookswarrow}},
+	postbreak=\\raisebox{0ex}[0ex][0ex]{\\ensuremath{\\rcurvearrowse\\space}},
 	breaklines=true,
 	breakatwhitespace=true,
 	tabsize=3,
