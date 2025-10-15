@@ -50,6 +50,16 @@ snippet pbigi "Bigints package" Ab
 \\DeclareFontShape{OMX}{lmex}{m}{n}{<-> lmex10}{}
 endsnippet
 
+snippet pside "Siunitx package with locale DE" Ab
+\\usepackage{siunitx}
+\\sisetup{locale=DE, list-separator={;\\ }, list-final-separator={;\\ }, product-symbol={\\ensuremath{\\cdot}}, uncertainty-mode=separate, per-mode=fraction}
+endsnippet
+
+snippet psien "Siunitx package with locale UK" Ab
+\\usepackage{siunitx}
+\\sisetup{locale=UK, list-separator={;\\ }, list-final-separator={;\\ }, uncertainty-mode=separate, per-mode=fraction}
+endsnippet
+
 # Insert more packages here ...
 
 ################
@@ -505,19 +515,25 @@ snippet exercise "Template for exercise problem submissions" Ab
 \\usepackage{geometry}
 \\geometry{margin=3cm}
 \\usepackage{parskip}
-% Math
+% Text layout
+\\usepackage{color}
+\\usepackage{hyperref}
+% Maths & Physics
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{derivative}
 \\usepackage{cancel}
+\\usepackage{siunitx}
+\\sisetup{locale=DE, list-separator={;\\ }, list-final-separator={;\\ }, product-symbol={\\ensuremath{\\cdot}}, uncertainty-mode=separate, per-mode=fraction}
 % Snippets for other math packages: ppla, pali, pbigi
-% Visuals and code
+% Visuals
 \\usepackage{graphicx}
 \\usepackage{subcaption}
+% Special environments
 \\usepackage{enumerate}
+\\usepackage{fancyvrb}
 \\usepackage{comment}
 \\usepackage{listingsutf8}
-\\usepackage{color}
 
 \\input{~/preferences/tex/math-commands.tex}
 $1
@@ -538,23 +554,26 @@ snippet basicdoc "Template for basic document" Ab
 \\usepackage[utf8]{inputenc}
 \\usepackage{lmodern}
 \\usepackage[${1:british}]{babel}
+% Text layout
+\\usepackage{color}
+\\usepackage{hyperref}
 % Page layout
 \\usepackage{lastpage}
 \\usepackage{geometry}
 \\geometry{margin=3cm}
 \\usepackage{parskip}
 % Math
+\\usepackage{amsmath}
 \\usepackage{amssymb}
 % Snippets for other math packages: ppla, pali, pbigi
-% Visuals and code
+% Visuals
 \\usepackage{graphicx}
 \\usepackage{subcaption}
+% Special environments
 \\usepackage{enumerate}
 \\usepackage{fancyvrb}
 \\usepackage{comment}
 \\usepackage{listingsutf8}
-\\usepackage{color}
-\\usepackage{parskip}
 
 $2
 \\title{$3}
