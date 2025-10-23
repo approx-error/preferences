@@ -246,6 +246,35 @@ snippet fig "Figure environment" bi
 \\end{figure}
 endsnippet
 
+context "math(False)"
+snippet sfig "Subfigure environment" bi
+\\begin{figure}[${1:htpb}]
+	\\centering
+	\\caption{$2}
+	\\label{fig:$3}
+	\\begin{subfigure}[t]{0.4\\textwidth}
+		\\includegraphics[width=\\textwidth]{$4}
+		\\caption{$5}
+		\\label{fig:$6}
+	\\end{subfigure}
+	\\quad
+	\\begin{subfigure}[t]{0.4\\textwidth}
+		\\includegraphics[width=\\textwidth]{$7}
+		\\caption{$8}
+		\\label{fig:$9}
+	\\end{subfigure}
+\\end{figure}
+endsnippet
+
+context "math(False)"
+snippet subf "Single subfigure environment" bi
+\\begin{subfigure}[${1:tcb}]{${2:0.4}\\textwidth}
+	\\includegraphics[width=\\textwidth]{$3}
+	\\caption{$4}
+	\\label{fig:$5}
+\\end{subfigure}
+endsnippet
+
 #####################
 # Math environments #
 #####################
