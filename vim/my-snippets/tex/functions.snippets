@@ -19,33 +19,33 @@ endglobal
 # Trig functions
 
 context "math()"
-snippet sin "Sine function"
-\\sin$0
+snippet "([^a])sin" "Sine function" ri
+`!p snip.rv = match.group(1)`\\sin$0
 endsnippet
 
 context "math()"
-snippet cos "Cosine function"
-\\cos$0
+snippet "([^a])cos" "Cosine function" ri
+`!p snip.rv = match.group(1)`\\cos$0
 endsnippet
 
 context "math()"
-snippet tan "Tangent function"
-\\tan$0
+snippet "([^a])tan" "Tangent function" ri
+`!p snip.rv = match.group(1)`\\tan$0
 endsnippet
 
 context "math()"
-snippet sec "Secant function"
-\\sec$0
+snippet "([^a])sec" "Secant function" ri
+`!p snip.rv = match.group(1)`\\sec$0
 endsnippet
 
 context "math()"
-snippet csc "Cosecant function"
-\\csc$0
+snippet "([^a])csc" "Cosecant function" ri
+`!p snip.rv = match.group(1)`\\csc$0
 endsnippet
 
 context "math()"
-snippet cot "Cotangent function"
-\\cot$0
+snippet "([^a])cot" "Cotangent function" ri
+`!p snip.rv = match.group(1)`\\cot$0
 endsnippet
 
 # Inverse trig functions
@@ -83,33 +83,33 @@ endsnippet
 # Hyperbolic functions
 
 context "math()"
-snippet sinh "Hyperbolic sine function"
-\\sinh$0
+snippet "([^a])sinh" "Hyperbolic sine function" ri
+`!p snip.rv = match.group(1)`\\sinh$0
 endsnippet
 
 context "math()"
-snippet cosh "Hyperbolic cosine function"
-\\cosh$0
+snippet "([^a])cosh" "Hyperbolic cosine function" ri
+`!p snip.rv = match.group(1)`\\cosh$0
 endsnippet
 
 context "math()"
-snippet tanh "Hyperbolic tangent function"
-\\tanh$0
+snippet "([^a])tanh" "Hyperbolic tangent function" ri
+`!p snip.rv = match.group(1)`\\tanh$0
 endsnippet
 
 context "math()"
-snippet sech "Hyperbolic secant function"
-\\sech$0
+snippet "([^a]sech)" "Hyperbolic secant function" ri
+`!p snip.rv = match.group(1)`\\sech$0
 endsnippet
 
 context "math()"
-snippet csch "Hyperbolic cosecant function"
-\\csch$0
+snippet "([^a]csch)" "Hyperbolic cosecant function" ri
+`!p snip.rv = match.group(1)`\\csch$0
 endsnippet
 
 context "math()"
-snippet coth "Hyperbolic cotangent function"
-\\coth$0
+snippet "([^a])coth" "Hyperbolic cotangent function" ri
+`!p snip.rv = match.group(1)`\\coth$0
 endsnippet
 
 # Inverse hyperbolic functions
@@ -196,8 +196,8 @@ snippet re "Real part" i
 endsnippet
 
 context "math()"
-snippet im "Imaginary part" i
-\\im$0
+snippet "([^s])im" "Imaginary part" ri
+`!p snip.rv = match.group(1)`\\im$0
 endsnippet
 
 context "math()"
