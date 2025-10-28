@@ -158,8 +158,8 @@ endsnippet
 # ------------------------------
 
 context "math()"
-snippet comm "Ordinary commutator" Ai
-\\comm{$1}{$2}$0
+snippet "([^a^A])comm" "Ordinary commutator" rAi
+`!p snip.rv = match.group(1)`\\comm{$1}{$2}$0
 endsnippet
 
 context "math()"
