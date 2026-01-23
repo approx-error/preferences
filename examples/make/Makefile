@@ -3,7 +3,16 @@
 # Which fortran compiler to use:
 compiler = gfortran
 # Which flags to user when compiling, current flags: Enable a whole host of warnings, free form fortran, no max line length in source code, no implicit typing, allow C-style escape characters in strings:
-flags = -Wall -ffree-form -ffree-line-length-none -fimplicit-none  -fbackslash
+flags = -Wall -Wextra -ffree-form -ffree-line-length-none -fimplicit-none -fbackslash
+# Additional Fortran dialect flags that might be interesting:
+# -fmodule-private (module variables are always private unless explicitly declared as public)
+# -fmax-identifier-length=n (Specify the maximum allowed identifier length. Typical values are 31 (Fortran 95) and 63 (Fortran 2003 and later))
+# -std=f2023 (Set the fortran standard the code should conform to. Default is 'gnu', other values of interest are 'f95', 'f2003', 'f2008', 'f2018', and 'legacy')
+# -fdollar-ok (Allow '$' as a valid non-first character in a symbol name. Normally symbols with '$' are rejected since it is unclear which rules apply to implicit typing as
+#  different vendors implement different rules. Using '$' in implicit statements is also rejected)
+# Compilation flags:
+# --include-directory=dir (or -I dir) (Add 'dir' to the list of directories that are searched when locating external libraries)
+# -J dir (Spcifieds where to put .mod files for compiled modules and adds 'dir' to the list of directories searched by an use-statement)
 # Grouping the source files and object files together so they can be referenced with a single variable:
 src_files = sample_kinds.f90 sample_module.f90 sample_code.f90
 obj_files = $(patsubst %.f90, %.o, $(src_files))
