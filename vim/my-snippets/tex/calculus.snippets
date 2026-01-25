@@ -151,8 +151,8 @@ endsnippet
 ###############################################
 
 context "math()"
-snippet rd "r-derivative" i
-\\odv{$1}{r}$0
+snippet "([^o])rd" "r-derivative" ri
+`!p snip.rv = match.group(1)`\\odv{$1}{r}$0
 endsnippet
 
 context "math()"
@@ -311,8 +311,8 @@ snippet ii "Indefinite integral" Ai
 endsnippet
 
 context "math()"
-snippet ni "Indefinite integral with integration variable first" i 
-\\int\\odif{$1} $0
+snippet "([^u])ni" "Indefinite integral with integration variable first" ri 
+`!p snip.rv = match.group(1)`\\int\\odif{$1} $0
 endsnippet
 
 context "math()"

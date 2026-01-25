@@ -119,8 +119,8 @@ snippet po "Power ie. superscript" Ai
 endsnippet
 
 context "math()"
-snippet ll "Low low ie. subscript" Ai
-_{$1}$0
+snippet "([^e])ll" "Low low ie. subscript" Ari
+`!p snip.rv = match.group(1)`_{$1}$0
 endsnippet
 
 context "math()"

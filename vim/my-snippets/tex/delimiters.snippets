@@ -98,8 +98,8 @@ snippet la "left angle bracket" i
 endsnippet
 
 context "math()"
-snippet ra "right angle bracket" i
-\\rangle
+snippet "([^t])ra" "right angle bracket" ri
+`!p snip.rv = match.group(1)`\\rangle
 endsnippet
 
 # ----------------------------------------
@@ -133,29 +133,29 @@ endsnippet
 
 context "math()"
 snippet lrn "left right norm" Ai
-\\left\| ${1:${VISUAL}} \\right\|$0
+\\left\\| ${1:${VISUAL}} \\right\\|$0
 endsnippet
 
 context "math()"
 snippet len "left norm (named len and not ln to avoid conflict with natural log)" i
-\\left\|
+\\left\\|
 endsnippet
 
 context "math()"
 snippet rn "right norm" i
-\\right\|
+\\right\\|
 endsnippet
 
 # ----------------------------------------
 
 context "math()"
 snippet lrce "left right ceil" Ai
-\\lceil ${1:${VISUAL}} \\rceil$0
+\\left\\lceil ${1:${VISUAL}} \\right\\rceil$0
 endsnippet
 
 context "math()"
 snippet lrf "left right floor" Ai
-\\lfloor ${1:${VISUAL}} \\rfloor$0 
+\\left\\lfloor ${1:${VISUAL}} \\right\\rfloor$0 
 endsnippet
 
 # ----------------------------------------
