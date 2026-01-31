@@ -224,13 +224,13 @@ snippet >s "Greater than or approximately equal to" Ai
 endsnippet
 
 context "math()"
-snippet << "Much less than" i
-\\ll$0
+snippet "([^<])<<" "Much less than" ri
+`!p snip.rv = match.group(1)`\\ll$0
 endsnippet
 
 context "math()"
-snippet >> "Much greater than" i
-\\gg$0
+snippet "([^>])>>" "Much greater than" ri
+`!p snip.rv = match.group(1)`\\gg$0
 endsnippet
 
 context "math()"

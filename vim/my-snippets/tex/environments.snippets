@@ -275,6 +275,13 @@ snippet subf "Single subfigure environment" bi
 \\end{subfigure}
 endsnippet
 
+context "math(False)"
+snippet tans "Text-based answer box" bi
+\\parbox{0.9\\textwidth}{
+	\\fbox{${0:${VISUAL}}}
+}
+endsnippet
+
 #####################
 # Math environments #
 #####################
