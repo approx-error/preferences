@@ -277,8 +277,10 @@ endsnippet
 
 context "math(False)"
 snippet tans "Text-based answer box" bi
-\\parbox{0.9\\textwidth}{
-	\\fbox{${0:${VISUAL}}}
+\\fbox{
+	\\parbox{0.9\\textwidth}{
+	${0:${VISUAL}}
+	}
 }
 endsnippet
 
