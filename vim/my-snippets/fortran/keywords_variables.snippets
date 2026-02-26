@@ -73,15 +73,15 @@ integer :: $0
 endsnippet
 
 snippet int "Integer"
-integer (kind = ${1:ik}) :: $0
+integer(${1:ik}) :: $0
 endsnippet
 
 snippet cin "Constant integer"
-integer (kind = ${1:ik}), parameter :: $1 = $0
+integer(${1:ik}), parameter :: $1 = $0
 endsnippet
 
 snippet iin "Integer with intent"
-integer (kind = ${1:ik}), intent(${2:in/out/in out}) :: $0
+integer(${1:ik}), intent(${2:in/out/in out}) :: $0
 endsnippet
 
 # ----------------------------------
@@ -91,15 +91,15 @@ real :: $0
 endsnippet
 
 snippet real "Real number"
-real (kind = ${1:rk}) :: $0
+real(${1:rk}) :: $0
 endsnippet
 
 snippet crea "Constant real number"
-real (kind = ${1:rk}), parameter :: $1 = $0
+real(${1:rk}), parameter :: $1 = $0
 endsnippet
 
 snippet irea "Real number with intent"
-real (kind = ${1:rk}), intent(${2:in/out/in out}) :: $0
+real(${1:rk}), intent(${2:in/out/in out}) :: $0
 endsnippet
 
 # ----------------------------------
@@ -109,29 +109,29 @@ complex :: $0
 endsnippet
 
 snippet compl "Complex number"
-complex (kind = ${1:rk}) :: $0
+complex(${1:rk}) :: $0
 endsnippet
 
 snippet ccomp "Constant complex number"
-complex (kind = ${1:rk}), parameter :: $1 = $0
+complex(${1:rk}), parameter :: $1 = $0
 endsnippet
 
 snippet icomp "Complex number with intent"
-complex (kind = ${1:rk}), intent(${2:in/out/in out}) :: $0
+complex(${1:rk}), intent(${2:in/out/in out}) :: $0
 endsnippet
 
 # ----------------------------------
 
 snippet str "String of characters"
-character(len = ${1:*}) :: $0
+character(len=${1:*}) :: $0
 endsnippet
 
 snippet cst "Constant string of characters"
-character(len = ${1:*}), parameter :: $1 = '$0'
+character(len=${1:*}), parameter :: $1 = '$0'
 endsnippet
 
 snippet ist "String with intent"
-character(len = ${1:*}), intent(${2:in/out/in out}) :: $0
+character(len=${1:*}), intent(${2:in/out/in out}) :: $0
 endsnippet
 
 # ----------------------------------
