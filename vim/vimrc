@@ -37,6 +37,10 @@ set viminfo='100,<1000,s100,h,n~/.local/state/vim/viminfo
 set path+=**	" Adds ** to the path variable, so vim searches recursively through directories when using the :find command
 set wildmenu	" Adds a tab-completion menu to commands including the :find command
 
+" Define custom commands
+command Vt vert term
+command T term
+
 " PLUGINS
 call plug#begin()
 	Plug 'lervag/vimtex'
